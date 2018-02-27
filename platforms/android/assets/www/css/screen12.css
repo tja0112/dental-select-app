@@ -1,0 +1,40 @@
+/* Empty. Add your own CSS if you like */
+
+h4{
+	
+font-weight:bold;
+text-align:center;
+	
+}
+
+.hrule{
+	
+	margin:auto;
+	
+}
+
+.bo{
+	
+	
+	
+	
+}
+.sub{
+	margin:0 auto;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:65px;
+	padding-left:65px;
+	
+}
+.textBottom{
+	
+	text-align:center;
+	font-size:17px;
+	
+}
+a{
+	
+	text-decoration:none;  
+	
+}

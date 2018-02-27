@@ -1,0 +1,197 @@
+/*body, div{
+	background-color: yellow;
+}*/
+
+
+
+
+.loginimg{
+width:100%;
+height:480px;
+z-index:0;
+	
+}
+.loginback{
+	position:relative;
+	z-index:0;
+	padding:0px;
+	margin:0px;
+}
+
+.allelements{
+	position:relative;
+	margin:auto;
+	height:auto;
+	background-color:none;
+	margin-top:-450px;
+	z-index:99;
+	padding-bottom:10px;
+
+}
+.itemlogin{
+    margin-left:0px !important;
+    padding-left:0px !important;
+    margin-bottom: 20px;
+}
+
+.emailinput{
+    
+    padding-left:0px !important;
+    padding-top:0px !important;
+    margin-top:8px !important;
+    margin-bottom:8px !important;
+
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+    
+    border-left-style:solid !important;
+    border-left-width:1px !important;
+    border-left-color:#ababab !important;
+    
+    border-right-style:solid !important;
+    border-right-width:1px !important;
+    border-right-color:#ababab !important;
+}
+
+
+
+
+#pane{
+
+   /*background-image: url("/img/chooseaplan-top.jpg") no-repeat center center fixed;
+    -webkit-background-size: 20% 200px;
+    -moz-background-size: cover;
+    background-size: cover; */
+    
+/* background-image: url("/img/login.jpg");
+background-repeat:no-repeat;
+background-size: cover;
+background-position: center center;
+background-attachment:fixed; */
+
+/* background: url(../img/loginblue.jpg);
+-webkit-background-size:100% 500px;
+background-position:top;
+background-repeat:no-repeat; */
+}
+
+#headertop img{
+    margin-top: 25px;
+    width: 75%;
+    max-width: 215px;
+    height: 64px;
+    z-index:99;
+}
+
+#headertop div{
+    text-align: center;
+}
+
+#headertop h3{
+    
+    color: #FFFFFF;
+    margin-top: 36px;
+    letter-spacing: 2pt;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+#loginform{
+        z-index:99;
+
+    
+/*     box-shadow: 0px 0px 10px 6px rgba(68, 68, 68, 0.75);
+-moz-box-shadow: 0px 0px 10px 6px rgba(68, 68, 68, 0.75);
+-webkit-box-shadow: 0px 0px 10px 6px rgba(68, 68, 68, 0.75); */
+
+/* box-shadow: 0px 0px 10px 6px rgba(49, 50, 50, 0.75);
+-moz-box-shadow: 0px 0px 10px 6px rgba(49, 50, 50, 0.75);
+-webkit-box-shadow: 0px 0px 10px 6px rgba(49, 50, 50, 0.75); */
+/* 
+-webkit-box-shadow: 0px 0px 16px 0px rgba(49, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 16px 0px rgba(49, 50, 50, 0.75);
+box-shadow:         0px 0px 16px 0px rgba(49, 50, 50, 0.75); */
+
+/* -webkit-box-shadow: 0px 0px 13px 2px rgba(77, 77, 77, 0.98);
+-moz-box-shadow:    0px 0px 13px 2px rgba(77, 77, 77, 0.98);
+box-shadow:         0px 0px 13px 2px rgba(77, 77, 77, 0.98); */
+
+
+-webkit-box-shadow: 0px 0px 10px 2px rgba(80, 73, 80, 0.98);
+-moz-box-shadow:    0px 0px 10px 2px rgba(80, 73, 80, 0.98);
+box-shadow:         0px 0px 10px 2px rgba(80, 73, 80, 0.98);
+    
+}
+
+#loginform div{
+    display: block;
+    text-align: center;
+}
+
+#loginform h3{
+    color: #FFFFFF;
+    letter-spacing: 2pt;
+    font-weight: bold;
+}
+
+#loginform div #inputs{
+    width: 90%;
+}
+
+#loginform a{
+     letter-spacing: 1pt;
+}
+
+
+#footerlogin a{
+    /*font-size: 0.55em;*/
+    font-size: 13px;
+    text-align: center;
+    margin: 0 0 10px;
+    letter-spacing: 0px;
+}
+
+#footerlogin p{
+    /*font-size: 0.55em;*/
+    font-size: 13px;
+    text-align: center;
+    margin: 0 0 10px;
+    letter-spacing: 0px;
+    color: #999999;
+}
+
+#groupenrollment{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 8px;
+}
+
+#groupenrollment a{
+    letter-spacing: 1pt;
+    font-size:10px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 8px;
+    letter-spacing: 1pt;
+}
+
+input,
+input::-moz-input-placeholder {
+    font-size: 8px;
+    letter-spacing: 1pt;
+}
+
+input,
+input::input-placeholder {
+    font-size: 8px;
+    letter-spacing: 1pt;
+}
+
+.textunderline a{
+    text-decoration: underline;
+}
+
+

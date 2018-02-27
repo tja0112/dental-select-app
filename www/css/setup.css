@@ -1,0 +1,144 @@
+/* Empty. Add your own CSS if you like */
+
+/*h4{
+	
+font-weight:bold;
+text-align:center;
+	
+}*/
+
+.hrule{
+	
+	margin:auto;
+	
+}
+.sub{
+	margin:0 auto;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:65px;
+	padding-left:65px;
+	
+}
+.textSign{
+	
+	text-align:center;
+	font-size:12px;
+	letter-spacing:1pt;
+	color:#888888;
+}
+
+.textBottom{
+	
+	text-align:center;
+	font-size:14px;
+	
+}
+a{
+	
+	text-decoration:none;  
+	
+}
+.imgor{
+	background-color:none;
+	width:100%;
+ 	margin: 0 auto;
+	
+	
+}
+#mor{
+
+	width:100%;
+	height:auto;
+	
+}
+
+
+/* #socialLink1 h4{
+		
+}
+
+#socialDiv ul {
+width:100%;
+
+}
+#socialDiv :hover {
+    cursor: pointer;
+}
+
+#socialDiv ul li{
+	display:inline-block;
+	vertical-align:top;
+	margin:auto;
+	margin-left:15px;
+
+
+
+}
+
+
+
+.socialLabel{
+	margin-left:-25px;
+	font-size:10px;
+	color:#707070;
+	letter-spacing:1px;
+    margin:auto;
+	
+}
+.sociallink{
+	
+	max-width:70px;
+	margin-right:0px;
+	
+	margin:auto;
+	
+}
+.socialImage{
+	
+	margin:auto;
+	width:40px;
+
+	
+}
+ */
+ 
+ .signscont{
+	 
+	 margin:auto;
+	/*  background-color:blue; */
+	 height:72px;
+
+	padding-bottom:20%;
+	 
+ }
+ .signslogobox{
+/* 	 background-color:green; */
+	 height:72px;
+	 width:20%;
+	  float:left;
+	 
+ }
+ .signslogoimgfb{
+/* 	 background-color:gray; */
+	 height:auto;
+	  width:100%;
+	  text-align:center;
+	 
+ }
+  .signslogocaptionfb{
+/* 	  background-color:dimgray; */
+	 height:20px;
+	  width:100%;
+	  font-size:8px;
+	 letter-spacing:1.5px;
+	 text-align:center;
+	 color: #888888;
+ }
+
+ 
+ .fbimg{
+	 margin:auto;
+	 width:45%;
+	 cursor:pointer;
+ }

@@ -1,0 +1,89 @@
+<ion-view>
+
+    <div class="bar bar-subheader bar-light" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">PERSONAL INFO</h4>
+    </div>
+
+    <ion-content padding="true" class="scroll-content ionic-scroll" my-block="processing">
+
+        <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+        <br><br>
+        <div class="col col-60 col-offset-20">
+            <div class="fontHeavy">
+                <img src="img/person_icon.png" alt="person info"><br>
+                <label style="font-size:19px">{{ PersonalInfo.Name }}</label><br><br>
+            </div>
+        </div>
+
+        <div class="col" style="margin-top:-20px;">
+            <form name="personalInfo" ng-valid-submit="DoEdit()">
+                <div class="item item-input item-select colorplaceholder
+                        inputedit marginInputTextDependents selectStandard"
+                     style="padding-top:100px;">
+                    <select required id="placeholderSelect" data-tap-disabled="true"
+                            ng-model="PersonalInfo.Gender">
+                        <option value="">GENDER</option>
+                        <option value="M" ng-selected="PersonalInfo.Gender" class="optionSelectText">M</option>
+                        <option value="F" class="optionSelectText">F</option>
+                    </select>
+                </div>
+                <br>
+
+                <div class="list list-inset" style="margin:0px;">
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input type="text" placeholder="#" class="colorplaceholder" ng-model="PersonalInfo.NumberExternal">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input type="text" placeholder="STREET ADDRESS 1" class="colorplaceholder" ng-model="PersonalInfo.StreetAddress1">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input type="text" placeholder="NEIGHBORHOOD" class="colorplaceholder" ng-model="PersonalInfo.Neighborhood">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input type="text" placeholder="SUITE #" class="colorplaceholder" ng-model="PersonalInfo.NumberInternal">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input type="text" placeholder="COUNTY" class="colorplaceholder" ng-model="PersonalInfo.County">
+                    </label>
+                    <div class="item item-input  item-select colorplaceholder
+                            inputedit marginInputTextDependents selectStandard"
+                         style="padding-top:100px; margin-top:5px;">
+                        <select required id="placeholderSelect" data-tap-disabled="true"
+                                ng-model="PersonalInfo.Country">
+                            <option value="">COUNTRY</option>
+                            <option value="US" class="optionSelectText">United States</option>
+                        </select>
+                    </div>
+
+                    <div class="item item-input item-select colorplaceholder inputedit
+                            marginInputTextDependents selectStandard"
+                         style="padding-top:100px; margin-top:5px;">
+                        <select required id="placeholderSelect" data-tap-disabled="true"
+                                ng-model="PersonalInfo.State"
+                                ng-options="item as item.Text for item in states track by item.Value">
+                            <option value="">STATE</option>
+                        </select>
+                    </div>
+
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input required type="text" placeholder="CITY" class="colorplaceholder" ng-model="PersonalInfo.City">
+                    </label>
+
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input required type="text" placeholder="ZIP CODE" class="colorplaceholder" ng-model="PersonalInfo.ZipCode">
+                    </label>
+                </div>
+            </form>
+        </div>
+        <p id="helpInfo" style="color:#e69905;" class="fontBold">
+            EDIT PHONE AND EMAIL IN <a href="#/app/settings">SETTINGS</a>
+        </p>
+        <br />
+        <div class="col" >
+            <button type="submit" class="fontBold btn-Save" style="font-size:19px;width:100%;" ng-disabled="personalInfo.$invalid">
+                SAVE PERSONAL INFO
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,126 @@
+/*#style-four {
+    height: 8px;
+    border: 0;
+    box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    width: 250px;
+}*/
+
+/*.col{
+    vertical-align: middle !important;
+    padding: 5px;
+    width: 100%;
+}
+
+.row{
+    padding: 0px !important;
+}*/
+
+#paddingName{
+    padding-left: 25px !important;
+}
+
+#title{
+    font-weight: bold !important;
+    color: gray !important;
+}
+
+#viewDependents{/*eliminar*/
+    background:#888888 !important; 
+    color:white !important; 
+    font-size:16px !important; 
+    /* margin-right:1px !important; */
+}
+
+#viewDependentsFinalReview{
+    background:#888888 !important; 
+    color:white !important; 
+    font-size:16px !important; 
+   /*  margin-right:1px !important; */
+}
+
+/*#headertop img{
+    text-align: center !important;
+    height: 40px !important;
+}
+
+#headertop h2{
+    letter-spacing: 1pt !important;
+    font-weight: bold !important;
+}*/
+
+#cardTitle {
+    color: #FFFFFF !important;
+    text-align: left !important;
+    font-size: 20px !important;
+    letter-spacing: .5pt !important;
+    padding-right: 5px !important;
+}
+
+/*.button.button-positive{
+    border-color: white !important;
+}*/
+
+#centerText{
+    white-space: pre-line !important;
+    font-size:15px;
+    /* padding: 15px !important; */
+    /* border: 1px solid #ddd; 
+	padding-top:20px;
+
+
+min-height: 0px;
+overflow: hidden; */
+padding:12px;
+display:block;
+
+
+
+	
+}
+
+.col.col-33{
+   /*  padding: 0px !important; */
+position:relative;
+
+display:block;
+padding-bottom:0px;
+border: 1px solid #ddd; 
+}
+
+#personalInfo p{ /*eliminar*/
+    letter-spacing: 1pt !important;
+    font-size: 20px !important;
+    text-align: center !important;
+}
+/*
+.button.button-block{
+   letter-spacing: .5pt !important;
+   font-size: 11px !important;
+}
+*/
+
+#ShadowFinalReview{
+
+-webkit-box-shadow: inset 0px 0px 0px -33px #B3B1B1,0px 4px 16px 3px #C2C2C2;
+}
+
+#buttonPlan{
+  margin-top:1px !important; 
+  font-size:15px !important;
+  line-height:20px !important; 
+  min-height:20px !important;
+  border-radius: 2px;
+  border: 1px solid;
+  height: 25px;
+
+
+}
+
+.list-planbenefit > div{
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid;
+  padding: 20px;
+  max-width: 200px;
+}
+

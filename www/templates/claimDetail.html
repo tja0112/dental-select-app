@@ -1,0 +1,58 @@
+<ion-view>
+
+<div class="bar bar-subheader"  id="subheadertitle">
+    <h4 class="title" id="subheaderFont">CLAIM DETAIL</h4>
+</div>
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+    <div class="list card" id="ShadowFinalReview">
+        <div class="row item" style="padding:0px;">  
+        <div class="col col-50" style="padding:0px; vertical-align:middle;">
+            <div style="padding:15px;">
+                <p><h3 class="fontBold" style="font-size:19px">{{ claimdetails.name }}</h3></p>
+                <br>
+                <p><h4 class="fontMedium" style="font-size:13px">{{ claimdetails.date }} </h4></p>
+                <p style="font-size:13px;" class="fontMedium">{{ claimdetails.place }}<br>
+                TYPE: {{ claimdetails.type }} <br>
+                STATUS: {{ claimdetails.status }}</p>
+            </div>
+        </div>
+
+        <div class="col" style="padding:0px; vertical-align:middle;">
+            <div class="row item" style="padding:0px;">
+            <div class="col" id="viewDependents" style="padding:0px; vertical-align:middle;">
+                <br>
+                <center><p><h5 style="color:white; font-size:13px" class="fontMedium">TOTAL BILLED</h5>
+                    <h3 style="color:white" class="fontMedium">{{ claimdetails.totalbilled}}</h3></p>
+                </center>
+                    <br>
+                </div>
+            </div>
+            <div class="row item" style="padding:0px;">
+                <div class="col" id="viewDependents" style="padding:0px; vertical-align:middle;">
+                    <br>
+                    <center><p><h5 style="color:white; font-size:13px" class="fontMedium">YOUR PLAN PAYS</h5>
+                        <h3 style="color:white" class="fontMedium">{{ claimdetails.planpays }}</h3></p>
+                            </center>
+                        <br>
+                    </div>
+                </div>
+            <div class="row item" style="padding:0px;">
+                <div class="col" id="viewDependents" style="padding:0px; vertical-align:middle;">
+                    <br>
+                    <center><p><h5 style="color:white; font-size:13px" class="fontMedium">PAY OUT OF POCKET</h5>
+                        <h3 style="color:white" class="fontMedium">{{ claimdetails.payoutofpocket }}</h3></p>
+                            </center>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</ion-content>
+</ion-view>

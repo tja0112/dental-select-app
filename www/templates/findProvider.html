@@ -1,0 +1,122 @@
+<ion-view>
+
+    <div class="bar bar-subheader"  id="subheadertitle" >
+        <h4 class="title" id="subheaderFont" style="letter-spacing:1px;">PROVIDERS FOUND : {{ totalProviders }}</h4>
+    </div>
+ 
+
+<ion-content padding="false" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+
+    <div class="row paddingMenu">
+        <div class="col buttonTransparentfindProvider" style="padding-top:4px;">
+         <div class="item item-input item-select " 
+         style="padding:0px; background-color: transparent; border-width: 2px; line-height: 1.42857; font-weight: normal; height:31px;">
+            <div class="input-label" id="placeholderSelectGrayBox">
+              SORT BY
+            </div>
+        <select style="background-color: transparent;" ></select>
+      </div>
+    </div>
+
+
+     <div class="col buttonTransparentfindProvider" style="padding-top:4px;">
+         <div class="item item-input item-select " 
+         style="padding:0px; background-color: transparent; border-width: 2px; line-height: 1.42857; font-weight: normal; height:31px;">
+            <div class="input-label" id="placeholderSelectGrayBox">
+                FILTER
+            </div>
+        <select style="background-color: transparent;" ></select>
+      </div>
+    </div>
+
+    
+      </div>
+
+  <div class="row paddingMenu">
+       <div class="col buttonTransparentfindProvider" style="padding-top:4px;" >         
+          <label class="item item-input inputZipCode" style="height: 31px;" id="placeholderSelectGrayBox">
+            <i class="testsearchImage"  style="margin-left:1px; margin-top:8px; padding-right:9px;" ></i>
+            <input type="search" style="color:white; padding:5px; margin-top:2px;" placeholder="NEW SEARCH" class="zipcode fontBold" >
+          </label>
+      </div>
+  </div>
+
+    <br>
+    <ion-list>
+    <div ng-repeat="item in NewItemsProviders track by $index | limitTo:3" > 
+    <div class="row">
+        <div class="col fontBold" style="padding-left:13px; line-height:15px;" id="bigFont">
+            {{item.FirstName+" "+ item.LastName}} <br>     
+             <!-- <label id="mediumFont">Herriman Hills Dental</label>    -->
+        </div>
+        <div class="col" style="margin-top:-10px; margin-bottom:10px;">
+             <div class="row">
+                <div class="row text-center" style="margin:auto; display:block;">
+                   <label style="vertical-align:middle;" id="standardFont" class="fontMedium">{{item.Miles+" Miles"}}</label>                   
+                    <a  href="{{item.Route}}"  class="button blueController mapButton button-small fontBold" 
+                    style="margin-top:-4px; margin-left: 15px; height:30px; line-height:24px;">
+                       MAP                            
+                    </a>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="row" id="marginTopCards">
+        <div class="col">
+            <div class="row">
+                <div class="col col-20" id="marginIcons">
+                    <img src="img/person.PNG" style="margin-top:10px;" class="imageSize" />
+                </div>  
+                <div class="col" style="margin-top:10px; line-height:10px;">
+                    <label id="smallFont" class="fontMedium">SPECIALTY</label> <br>
+                    <label id="mediumFont" class="fontMedium" style="vertical-align:top">{{item.Speciality}}</label>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-20" id="marginIcons">
+                    <img src="img/phone.PNG" style="margin-top:10px;" class="imageSize" />
+                </div>  
+                <div class="col" style="margin-top:10px;">
+                    <a id="mediumFont" href="tel:{{item.Phone}}" ng-if="item.Phone" class="fontMedium">{{item.Phone}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="margin-left:-51px;">
+             <div class="row">
+                <div class="col col-20" id="marginIcons">
+                    <img src="img/share.PNG" style="margin-top:10px;" class="imageSize" />
+                </div>  
+                <div class="col" style="margin-top:10px; line-height:10px;">
+                    <label id="smallFont" class="fontMedium">NETWORK</label> <br>
+                    <label id="mediumFont" style="vertical-align:top" class="fontMedium">{{item.Network}}</label>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col col-20" id="marginIcons">
+                    <img src="img/location.PNG" style="margin-top:10px;" class="imageSize"/>
+                </div>  
+                <div class="col" style="margin-top:12px; line-height:10px;">
+                    <label id="mediumFont" class="fontMedium" style="vertical-align:middle">{{item.FormattedAdderss}}</label>
+                </div>
+            </div>
+        </div>
+        </div>
+
+            <hr>
+          </div>
+        <ion-list>
+        
+        <ion-infinite-scroll on-infinite="loadMoreItems()" distance="1%" ng-if="canBeLoadMore()" icon="ion-loading-c" spinner="ion-loading-c">
+        </ion-infinite-scroll>
+        
+        <ion-spinner style="position:absolute; bottom:20px; left:45%; right:45%;" icon="ios" ng-hide="itemIndex == totalProviders"></ion-spinner>
+
+</ion-content>
+
+     
+</ion-content>
+</ion-view>
+    

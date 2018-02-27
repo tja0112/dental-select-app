@@ -1,0 +1,115 @@
+/* Empty. Add your own CSS if you like */
+
+.mombbimg{
+width:100%;
+height:auto;
+z-index:0;
+	
+}
+.mombb{
+	position:relative;
+	z-index:0;
+	
+}
+.divmain{
+	position:relative;
+	margin:auto;
+	height:auto;
+	background-color:none;
+	margin-top:-140px;
+	z-index:99;
+}
+
+.enroll{
+	
+	text-align:center;
+	font-size:bolder !important;
+	
+
+	
+}
+#ge{
+	
+	font-size:23px !important;
+	font-size:bolder !important;
+}
+.emplo{
+	
+	margin-left:25px;
+	margin-right:25px;
+	font-size:7px !important;
+}
+
+.plans{
+	/*height:auto;*/
+	background-color:white;
+	/*-webkit-box-shadow: 0px 0px 10px 2px rgba(80, 73, 80, 0.98);
+-moz-box-shadow:    0px 0px 10px 2px rgba(80, 73, 80, 0.98);
+box-shadow:         0px 0px 10px 2px rgba(80, 73, 80, 0.98);*/
+	 /*box-shadow: inset 0px 0px 0px -33px #B3B1B1,0px 4px 16px 3px #C2C2C2;*/
+	box-shadow: 10px 10px 0px rgba(0,0,0,0.1), -10px 10px 10px rgba(0,0,0,0.1);
+
+	/*-webkit-box-shadow: inset 0px 0px 0px -33px #B3B1B1,0px 4px 16px 3px #C2C2C2;
+	-moz-box-shadow: inset 0px 0px 0px -33px #B3B1B1,0px 4px 16px 3px #C2C2C2;
+	-o-box-shadow: inset 0px 0px 0px -33px #B3B1B1,0px 4px 16px 3px #C2C2C2;*/
+	padding-bottom: 20px;
+}	
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 0 !important;
+    text-align: center;
+     padding-left: 60px;
+    padding-right: 60px;
+    color:#999999;
+    /*letter-spacing: 1.5pt;*/
+    padding-bottom: 5px !important;
+
+    
+}
+
+.table{
+	margin:auto;
+    border: 0 !important;
+    text-align: center;
+    margin-bottom:10px;
+	color:darkgray;
+}
+
+thead{
+font-weight: normal!important;
+  color:darkgray;
+
+}
+
+
+#started{
+		
+	height:50px;
+	background-color:white;
+
+
+}
+
+#btns{
+	margin-top:-15px;
+	padding-top:-10px;
+	margin:auto;
+padding-left:40px;
+padding-right:40px;
+font-size:12px;
+}
+
+h2{
+	
+text-align:center;
+color:white;
+    letter-spacing: 3pt;
+}
+
+
+
+#pwaive{
+	margin: 10px auto;
+	font-size: 12px;
+	color:#0080c6;
+}

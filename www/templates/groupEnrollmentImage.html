@@ -1,0 +1,53 @@
+
+<ion-view>
+
+  <ion-content padding="false" class="scroll-content ionic-scroll" my-block="processing">
+ 
+ <div class="mombb">
+ <img src="img/groupenrollment-image.jpg" class="mombbimg"/>
+ </div>
+ 
+ <br>
+ <div class="col-90 divmain">
+    <div class="enroll">
+	<h2 id="ge"><b>GROUP<br>ENROLLMENT</b></h2>
+	</div>
+	<div class="plans" >
+	    <table class="table table-bordered">
+	        <tbody>
+	        	<tr>
+	            	<td style="padding-left: 0; padding-right: 0;">
+	            		<div class="emplo"><br>
+	              			<p id="helpInfoImage" class="fontBold" style="letter-spacing: 1px;">YOUR EMPLOYER HAS CHOSEN TO OFFER
+				 	  		  				   					   THE FOLLOWING PLANS:</p>
+				 		</div>
+					</td>
+	          	</tr>                            
+	       
+	          	<tr ng-repeat="plan in plans | orderBy: ['-Enabled','Order']">
+					<td style="padding-left: 0; padding-right: 0;">
+						<h2 class="hplan fontMedium" ng-class="{ 'hplan': plan.Enabled, 'hdisabledplan': !plan.Enabled }">{{ plan.ImageName }}</h2>
+					</td>
+	          	</tr>
+	        </tbody>
+        </table>
+
+		<div class="row" style="margin-bottom:30px;">
+			<div class="col col-80 col-offset-10 text-center" style="margin:auto; display:block;">
+				<a  href="#/app/started" class="button blueController button-small fontBold" id="centerLargeButton">
+					LET´S GET STARTED
+				</a> 
+			</div>
+		</div>
+
+	</div>
+ </div>
+ 
+ <div class="row" style="margin-bottom:20px;">
+ 	<div class="col col-80 col-offset-10 text-center">
+  		<p id="pwaive" class="fontMedium" style="font-size: 15px;"><a href="#/app/waiveCoverage">Waive Coverage</a></p>
+  	</div>
+ </div>
+   
+  </ion-content>
+</ion-view>

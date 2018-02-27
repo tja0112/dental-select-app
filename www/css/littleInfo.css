@@ -1,0 +1,45 @@
+#headertop img{
+    text-align: center;
+    height: 40px;
+}
+
+#headertop h2{
+    letter-spacing: 1pt;
+    font-weight: bold;
+}
+
+/*.row{
+	padding: 0px;
+}
+
+.col{
+	padding: 0px;
+}*/
+#viewDependents {
+    color: white;
+    font-size: 11px;
+    margin-right: 1px;
+}
+
+
+
+/*.buttonSquare {
+    border-color: transparent;
+    background-color: #f8f8f8;
+    color: #444;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer;
+}*/

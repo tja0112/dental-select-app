@@ -1,0 +1,40 @@
+#logoImage{
+	width: 60%;
+	max-width: 200px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;	           
+} 	    
+#title  {
+	font-weight: bold;
+	text-align: center;
+
+
+}
+
+
+#p {
+	text-align: center;
+}
+
+
+.style-four {
+	height: 8px;
+	border: 0;
+	box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+}
+
+#ColorLabel {
+	text-align: center;
+	font-family: inherit;
+	font-size: 18px;	        
+}
+
+#btnConf{
+	text-align: center;
+}
+
+#btnConf button{
+	padding-left: 20px;
+	padding-right: 20px;
+} 

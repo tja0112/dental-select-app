@@ -1,0 +1,140 @@
+<ion-view hide-back-button="true">
+
+    <div class="bar bar-subheader bar-light" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">FIND A PROVIDER</h4>
+    </div>
+
+
+    <ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+        <form name="findProvider" ng-valid-submit="doSubmit()" novalidate>
+            <div class="top">
+                <div class="row">
+                    <div class="col col-10 col-offset-10">
+                        <div class="col-offset-10 checkbox checkboxfind chb checkbox-square grayCheckbox">
+                            <input type="checkbox"
+                                   class="checkboxfind chb checkbox-square grayCheckbox"
+                                   style="border-width:2px; width:25px; height:25px; padding:0px;
+                    margin-right:10px; margin-bottom:5px;" id="UseLocation"
+                                   ng-model="isChecked" ng-click="getLocation()" ng-change="getactiveButton();"/>
+                        </div>
+                    </div>
+                    <div class="col" style="margin-left:15px;">
+                        <div class="col fontBold" id="lbl" style="margin-top:10px; font-size:13px;"> USE CURRENT LOCATION</div>
+                    </div>
+                </div>
+                <div>
+                    <img class="border" id="brd" src="img/ors.png" />
+                </div>
+                <div style="margin-top:0px; padding:6px;">
+                    <div class="row col">
+                        <label class="item item-input inputZipCode">
+                            <input type="text" style="color:white; padding:0px;"
+                                   placeholder="ENTER ZIP CODE" class="zipcode fontBold"
+                                   ng-model="Provider.zipCode" ng-change="getactiveButton();">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <img class="border" src="img/ors.png" />
+                </div>
+                <div class="row" style="padding:10px;">
+                    <div class="col col-45 item item-select selectStandard"
+                         style="padding:0px; border-radius: 2px; border-width: 2px;  border-color:#ddd;
+                 background-color:transparent; margin-right:8px;">
+
+                        <select data-tap-disabled="true"
+                                ng-options="item as item.Text for item in states track by item.Value"
+                                ng-model="filterState.state" ng-change="getCities(item.Value);getactiveButton();"
+                                style="margin-bottom: 2px; color:white;
+                        padding-left:5px;  direction: ltr; background-color:transparent;"
+                                class="placeholderSelectProvider" ></select>
+                    </div>
+                    <div class="col col-45 item item-select selectStandard"
+                         style="padding:0px; border-radius: 2px; border-width: 2px;  border-color:#ddd;
+                 background-color:transparent;">
+
+                        <select data-tap-disabled="true"
+                                ng-options="item as item.Text for item in cities track by item.Value"
+                                ng-model="filterState.city"
+                                style="margin-bottom:2px; color:white;
+                        padding-left:5px; background-color: transparent;
+                        direction: ltr;"
+                                class="placeholderSelectProvider" ng-change="getactiveButton();"></select>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="bottom">
+                <div ng-show="isChecked">
+                    <div class="list list-inset ed" style="margin-bottom:5px; padding:10px;">
+                        <label class="item item-input inputDoctorLastN">
+                            <input type="number" placeholder="SEARCH DISTANCE" class="colorplaceholder" ng-model="filterState.maxDistance">
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="top" style="background-color: white;">
+                    <br>
+
+                    <a href='' style="margin-top: -5px;" ng-click="aditionalop('#searchoptions')"
+                       class="fontBold lk">{{ showhidelink }}</a>
+
+                    <div id="searchoptions" style="display: none">
+
+                        <div class="list list-inset ed" style="margin-bottom:5px; padding:10px;">
+                            <label class="item item-input inputedit">
+                                <input type="text" placeholder="DOCTOR LAST NAME" maxlength="100"
+                                       class="colorplaceholder" ng-model="filterState.lastname" />
+                            </label>
+                        </div>
+
+
+                        <div class="row" style="padding:10px;">
+                            <div class="col col-45 item item-select selectStandard"
+                                 style="padding:0px; border-radius: 2px; border-color:#ababab;
+                 background-color:transparent; margin-right:8px;">
+
+                                <select data-tap-disabled="true"
+                                        ng-options="item as item.Text for item in specialities track by item.Value"
+                                        ng-model="filterState.speciality"
+                                        style="margin-bottom: 2px; color:#ababab;
+                        padding-left:5px;  direction: ltr; background-color:transparent;"
+                                        class="placeholderSelect"></select>
+                            </div>
+
+                            <div class="col col-45 item item-select selectStandard"
+                                 style="padding:0px; border-radius: 2px;  border-color:#ababab;
+                 background-color:transparent;">
+
+                                <select data-tap-disabled="true"
+                                        ng-options="item as item.Text for item in networks track by item.Value"
+                                        ng-model="filterState.Affiliation"
+                                        style="margin-bottom:2px; color:white;
+                        padding-left:5px; background-color: transparent;
+                        direction: ltr;"
+                                        class="placeholderSelect"></select>
+
+                            </div>
+                        </div>
+                        {{px}}
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col  text-center">
+                <input type="submit" href="" value="SUBMIT"
+                       class="item-input inputedit button button-small button-block blueController
+                       fontBold" id="centerButton" ng-disabled="findProvider.$invalid"/>
+            </div>
+        </div>
+        </form>
+        <br>
+    </ion-content>
+</ion-view>
+<style>
+    .inactive {
+        background-color:red !important;
+    }
+</style>

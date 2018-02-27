@@ -1,0 +1,56 @@
+
+<!--<link rel="stylesheet" type="text/css" href="css/memberInfo.css">-->
+
+<ion-view>
+<!-- 
+<ion-nav-bar class="blueController" style="border-bottom-color:red ;" >
+        <ion-nav-title  >
+            <img class="title" src="img/dentalSelectLogo.png" style=" margin:auto; display:block" />
+        </ion-nav-title>   
+        <ion-nav-back-button class="blueController">
+          <i class="icon ion-chevron-left">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+ -->
+  <div class="bar bar-subheader" id="subheadertitle">
+    <h4 class="title" id="subheaderFont">GROUP ENROLLMENT</h4>
+  </div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+    
+    <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+    <br>
+    <div>
+        <p id="registrationMemberTitle" class="fontBold">MEMBER NAME</p>
+        <p id="registrationMember" class="fontBold">{{Employee.Name}}</p>
+        <br>
+        <p id="registrationMemberTitle" class="fontBold">YOUR DATE OF BIRTH</p>
+        <p id="registrationMember" class="fontBold">{{Employee.DateofBirth}}</p>
+        <br>
+        <p id="registrationMemberTitle" class="fontBold">EMPLOYER</p>
+        <p id="registrationMember" class="fontBold">{{Employee.Employer}}</p>
+    </div>
+   
+   	<br>
+
+    <div class="row">
+		<div class="col col-90 text-center" style="margin:auto; display:block;">
+			<a ng-click="doConfirm()"  class="button blueController button-small submitButton fontBold" style="margin-right:10px; ">YES</a>
+            <a href="#/app/groupEnrollmentSN" class="button button-positive button-small button-outline submitButton fontBold" style="height: 40px;">NO</a>
+		</div>
+	</div>		
+    
+    <br>
+
+    <p id="helpInfo" class="fontMedium">Choose "NO" to go back and edit the 
+     information entered OR call Dental Select
+     Customer Care at <a href="">800-999-9789</a> if your 
+     information cannot be found.
+ </p>
+   
+
+</ion-content> 
+</ion-view>
+
+

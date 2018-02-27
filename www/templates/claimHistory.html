@@ -1,0 +1,179 @@
+<ion-view hide-back-button="true">
+
+<div class="bar bar-subheader"  id="subheadertitle">
+    <h4 class="title" id="subheaderFont">CLAIM HISTORY</h4>
+</div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+    <h6 class="text-center fontBold" style="margin-bottom:-28px; font-size:17px;">SORT BY</h6>
+
+    <div class="tabbed_area" style="margin-top:45px;">
+        <ul class="tabs col-100 text-center" style="margin:auto;  width:100%;">
+            <li style="margin-bottom:10px;">
+                <a href="" ng-click="tabSwitchClaim('#tab_1', '#content_1')" id="tab_1" class="tab-item active"
+                   style="margin:0px; margin-right:-60px; width:100%; padding-top:1px;">FIRST NAME</a>
+            </li>
+            <li><a href="" class="tab-item" style="margin:0px; margin-right:-60px; width:100%; padding-top:1px;"
+                    ng-click="tabSwitchClaim('#tab_2', '#content_2')" id="tab_2">DATE OF SERVICE</a></li>
+        </ul>
+
+        <div id="content_1">
+            <div class="text-center" ng-show="model.claimdate.length == 0">
+                <h3>No Information</h3>
+            </div>
+            <div class="list card" id="ShadowFinalReview" style="font-size:16px" ng-repeat="card in model.claimdate | orderBy:['name']" >
+                <div class="row item" style="padding:0px;">
+                    <div class="col col-50" style="padding:0px; vertical-align:middle;">
+                        <div style="padding:15px;">
+                            <p><h3 style="font-size:19px" class="fontBold">{{ card.name }}</h3></p>
+                            <br>
+                            <p><h4 class="fontMedium">{{ card.date }} </h4></p>
+                            <p style="font-size:13px;" class="fontMedium">
+                                {{ card.place }}<br>
+                                TYPE: {{ card.type }} <br>
+                                STATUS: {{ card.status }}
+                            </p>
+                            <br>
+                            <div class="row">
+                                <div class="col text-center" style="padding:0px; vertical-align:middle;">
+                                    <a ng-click="viewdetails($index)" style="line-height: 35px" class="button blueController button-small waiveCoverageButton btnDetails fontBold">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col" style="padding:0px; vertical-align:middle;">
+                        <div class="row item" style="padding:0px;">
+                            <div class="col viewDependent" style="padding:0px; vertical-align:middle;">
+                                <br>
+                                <center>
+                                    <p>
+                                        <h5 style="color:white; font-size:13px" class="fontMedium">TOTAL BILLED</h5>
+                                        <h3 style="color:white" class="fontMedium">{{ card.totalbilled}}</h3>
+                                    </p>
+                                </center>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row item" style="padding:0px;">
+                            <div class="col viewDependent" style="padding:0px; vertical-align:middle;">
+                                <br>
+                                <center>
+                                    <p>
+                                        <h5 style="color:white; font-size:13px" class="fontMedium">YOUR PLAN PAYS</h5>
+                                        <h3 style="color:white" class="fontMedium">{{ card.planpays }}</h3>
+                                    </p>
+                                </center>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row item" style="padding:0px;">
+                            <div class="col viewDependent" style="padding:0px; vertical-align:middle;">
+                                <br>
+                                <center>
+                                    <p>
+                                        <h5 style="color:white; font-size:13px" class="fontMedium">PAY OUT OF POCKET</h5>
+                                        <h3 style="color:white" class="fontMedium">{{ card.payoutofpocket }}</h3>
+                                    </p>
+                                </center>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content_2" style="display: none;">
+            <div class="text-center" ng-show="model.dependentname.length == 0">
+                <!-- <h3>No Information</h3> -->
+            </div>
+            <div class="list card" id="ShadowFinalReview" ng-repeat="card in model.claimdate">
+                <div class="row item" style="padding:0px;">
+                    <div class="col col-50" style="padding:0px; vertical-align:middle;">
+                        <div style="padding:15px;">
+                            <p><h3 class="fontBold" style="font-size:19px">{{ card.name }}</h3></p>
+                            <br>
+                            <p><h4 class="fontMedium">{{ card.date }}</h4></p>
+                            <p style="font-size:13px;" class="fontMedium">
+                                {{ card.place }}<br>
+                                TYPE: {{ card.type }} <br>
+                                STATUS: {{ card.status }}
+                            </p>
+                            <br>
+                            <div class="row">
+                                <div class="col text-center" style="padding:0px; vertical-align:middle;">
+                                    <a ng-click="viewdetailsdependents($index)" style="line-height: 35px" class="button blueController detailsBtn button-small btnDetails waiveCoverageButton fontBold">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col" style="padding:0px; vertical-align:middle;">
+                        <div class="row item" style="padding:0px;">
+                            <div class="col viewDependent" style="padding:0px; vertical-align:middle;">
+                                <br>
+                                <center>
+                                    <p>
+                                        <h5 style="color:white; font-size:13px" class="fontMedium">TOTAL BILLED</h5>
+                                        <h3 style="color:white" class="fontMedium">{{ card.totalbilled }}</h3>
+                                    </p>
+                                </center>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row item" style="padding:0px;">
+                            <div class="col viewDependent" style="padding:0px; vertical-align:middle;">
+                                <br>
+                                <center>
+                                    <p>
+                                        <h5 style="color:white; font-size:13px" class="fontMedium">YOUR PLAN PAYS</h5>
+                                        <h3 style="color:white" class="fontMedium">{{ card.planpays }}</h3>
+                                    </p>
+                                </center>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row item" style="padding:0px;">
+                            <div class="col viewDependent" style="padding:0px; vertical-align:middle;">
+                                <br>
+                                <center>
+                                    <p>
+                                        <h5 style="color:white; font-size:13px" class="fontMedium">PAY OUT OF POCKET</h5>
+                                        <h3 style="color:white" class="fontMedium">{{ card.payoutofpocket }}</h3>
+                                    </p>
+                                </center>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--<ion-tabs style="background:transparent; margin-top:25px;" class="tab100">
+            <ion-tab title="CLAIM DATE" class="fontMedium">
+                <ion-nav-view style="position: static;">
+                  
+
+                </ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="DEPENDENT NAME" class="fontMedium">
+                <ion-nav-view style="position: static;">
+                    
+
+
+
+                </ion-nav-view>
+            </ion-tab>
+        </ion-tabs>-->
+
+
+
+</ion-content>
+</ion-view>

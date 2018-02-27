@@ -1,0 +1,272 @@
+/* Empty. Add your own CSS if you like */
+/* #plans{
+	
+  text-align:center;
+
+}
+.container{
+	
+	 display: inline-block;
+	
+}
+
+.divHeight{
+	  margin:auto;
+	background-color:red;
+
+	
+} */
+#tlchoosseaplan{
+	font-weight:bolder;
+	letter-spacing:1px;
+	
+	
+}
+
+
+
+
+#ctetopchoosseaplan{
+	
+margin:auto;
+background-color:none;
+
+
+height:auto; 
+
+margin-bottom:30px;
+/* 
+background-image: url("http://dev.itnnovation.net/MobileDemo/old/screen12/images/top.jpg"); */
+
+overflow:auto;
+
+background-image: url(../img/chooseaplan-top.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+
+	
+}
+
+.cttopchoosseaplan{
+	
+	margin:auto;
+background-color:none;
+
+width:auto;
+height:100px;
+
+	
+}
+.ctopchoosseaplan{
+	
+	margin:auto;
+background-color:black;
+
+width:auto;
+height:auto;
+text-align:center;
+padding-top:7px;
+padding-bottom:7px;
+background:rgba(0,0,0,0.5); /*0.5 De Transparencia*/
+	
+
+}
+
+
+#ctemiddlechoosseaplan{
+	
+margin:auto;
+background-color:none;
+
+
+height:auto;
+margin-bottom:30px;
+
+/* background-image: url("http://dev.itnnovation.net/MobileDemo/old/screen12/images/middle.jpg"); */
+background-image: url(../img/chooseaplan-middle.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+	
+}
+
+.ctmiddlechoosseaplan{
+	
+	margin:auto;
+background-color:none;
+
+width:auto;
+height:100px;
+	
+}
+.cmiddlechoosseaplan{
+	
+	margin:auto;
+background-color:black;
+
+width:auto;
+height:auto;
+text-align:center;
+padding-top:7px;
+padding-bottom:7px;
+background:rgba(0,0,0,0.5); /*0.5 De Transparencia*/
+	
+}
+
+#ctebottomchoosseaplan{
+	
+margin:auto;
+background-color:none;
+
+
+height:auto;
+margin-bottom:30px;
+
+/* background-image: url("http://dev.itnnovation.net/MobileDemo/old/screen12/images/bottom.jpg"); */
+background-image: url(../img/chooseaplan-bottom.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+	
+}
+
+.ctbottomchoosseaplan{
+	
+	margin:auto;
+background-color:none;
+
+width:auto;
+height:100px;
+	
+}
+.cbottomchoosseaplan{
+	
+	margin:auto;
+background-color:black;
+
+width:auto;
+height:auto;
+text-align:center;
+padding-top:7px;
+padding-bottom:7px;
+background:rgba(0,0,0,0.5); /*0.5 De Transparencia*/
+	
+}
+
+@media screen and (min-width:800px) {
+
+#ctetopchoosseaplan{
+	height:300px;
+	
+}
+ .cttopchoosseaplan{
+    height:266px;
+} 
+
+#ctemiddlechoosseaplan{
+   height:300px;
+    }
+	
+    .ctmiddlechoosseaplan{
+      height:266px;
+    }
+
+    #ctebottomchoosseaplan{
+    height:300px;
+    }
+	
+    .ctbottomchoosseaplan{
+    	   height:266px;
+}
+}
+
+@media screen and (min-width:400px) and (max-width:780px) {
+
+	#ctetopchoosseaplan{
+	height:250px;
+	
+}
+	.cttopchoosseaplan{
+    height:215px;
+	}
+
+	#ctemiddlechoosseaplan{
+   height:250px;
+    }
+	
+    .ctmiddlechoosseaplan{
+      height:215px;
+    }
+	
+    #ctebottomchoosseaplan{
+    height:250px;
+}
+
+.ctbottomchoosseaplan{
+    	   height:215px;
+    }
+	
+	
+}
+ 
+@media screen and (min-width:331px) and (max-width:399px)  {
+
+ #ctetopchoosseaplan{
+	height:160px;
+	
+}
+	.cttopchoosseaplan{
+    height:125px;
+	}
+
+	#ctemiddlechoosseaplan{
+ height:160px;
+    }
+
+    .ctmiddlechoosseaplan{
+        height:125px;
+    }
+
+    #ctebottomchoosseaplan{
+height:160px;
+}
+
+    .ctbottomchoosseaplan{
+    	 height:125px;
+    }
+
+	
+}
+
+	
+
+@media screen and (max-width:330px) {
+	
+
+#ctetopchoosseaplan{
+	height:120px;
+
+ }
+	.cttopchoosseaplan{
+    height:85px;
+	}
+ 
+	#ctemiddlechoosseaplan{
+  height:120px;
+    }
+
+    .ctmiddlechoosseaplan{
+       height:85px;
+    }
+	
+    #ctebottomchoosseaplan{
+    height:120px;
+	}
+	
+    .ctbottomchoosseaplan{
+    	   height:85px;
+    }
+
+	
+} 
+
+ 
+ 

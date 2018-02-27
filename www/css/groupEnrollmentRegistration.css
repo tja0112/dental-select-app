@@ -1,0 +1,64 @@
+/* Empty. Add your own CSS if you like */
+
+/*h4{
+	
+font-weight:bold;
+text-align:center;
+	
+}*/
+
+/*.hrule{
+	
+	margin:auto;
+	
+}*/
+
+/*#sub{
+	
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:65px;
+	padding-left:65px;
+	
+}
+.textBottom{
+	
+	text-align:center;
+	font-size:14px;
+	
+}*/
+/*a{
+	
+	text-decoration:none;  
+	
+}*/
+/* Safari, Chrome and Opera */
+/*::-webkit-input-placeholder {
+
+ 
+ font-size:10px !important;
+
+
+}*/
+
+/* Firefox 18- */
+/*:-moz-placeholder { 
+  font-size:10px !important;
+}*/
+
+ /* Firefox 19+ */
+/*::-moz-placeholder {
+font-size:10px !important;
+}*/
+/* IE 10+ */
+/*:-ms-input-placeholder { 
+font-size:10px !important;
+}*/
+/* Edge */
+/*::-ms-input-placeholder { 
+font-size:10px !important;
+}*/
+/* Standard one last! */
+/*:placeholder-shown { 
+  font-size:10px !important;
+}*/

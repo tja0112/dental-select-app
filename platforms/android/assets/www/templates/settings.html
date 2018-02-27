@@ -1,0 +1,215 @@
+<ion-view hide-back-button="true">
+
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">SETTINGS</h4>
+    </div>
+
+    <ion-content padding="false" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+        <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+        <label ng-click="expand('#form1')" class="item greyBarStyle" ng-class="{ 'disabled-grey-bar': isexpanded, 'enabled-grey-bar': !isexpanded }">
+            <div class="item-content disable-pointer-events">
+                <span class="item-icon-right">LOGIN & EMAIL</span>
+                <i ng-class="{ 'ion-ios-arrow-down': isexpanded, 'ion-ios-arrow-right': !isexpanded }" style="font-size:25px; float:right"></i>
+            </div>
+        </label>
+
+        <div class="fontMedium" style="display:none;" id="form1">
+            <form name="sPersonalInfo" ng-valid-submit="save()" novalidate>
+                <div class="list list-inset" style="margin-top:0px; margin-bottom:8px;">
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input required ng-model="personalInfo.email" type="email" placeholder="NAME@DOMAIN.COM" class="colorplaceholder">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input required ng-model="personalInfo.password" type="password" placeholder="CURRENT PASSWORD" class="colorplaceholder">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input required ng-model="personalInfo.newpassword" type="password" placeholder="NEW PASSWORD" class="colorplaceholder">
+                    </label>
+                    <label class="item item-input inputedit marginInputTextDependents">
+                        <input required ng-model="personalInfo.confpassword" type="password" placeholder="CONFIRM NEW PASSWORD" class="colorplaceholder">
+                    </label>
+                    <br>
+
+                    <button type="submit" class="button-block btn-Save fontBold" style="font-size:15px; padding-right:25px; padding-left:25px;" ng-disabled="sPersonalInfo.$invalid">
+                        SAVE UPDATES
+                    </button>
+                </div>
+            </form>
+            <br>
+            <span style="color:#888888;" class="fontBold"></span>
+            <div class="row">
+                <div class="col col-50">
+                    <img class="img-settings" src="img/facebookIcon.png" alt="facebook" align:"middle" style="margin-right:8px;" />
+                    <label>FACEBOOK</label>
+                </div>
+                <div class="col col-offset-20">
+                    <a ng-click="facebookClick()" class="fontBlack" href="" style="font-size:12px;" ng-class="{ 'disabled-connection': !isconnected_facebook}">{{ facebook }}</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-50">
+                    <img class="img-settings" src="img/yahooIcon.png" alt="yahoo" align:"middle" style="margin-right:8px;" />
+                    <label>YAHOO</label>
+                </div>
+                <div class="col col-offset-20">
+                    <a ng-click="yahooClick()" class="fontBlack" href="" style="font-size:12px;" ng-class="{ 'disabled-connection': !isconnected_yahoo}">{{ yahoo }}</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-50">
+                    <img class="img-settings" src="img/twitterIcon.png" alt="twitter" align:"middle" style="margin-right:8px;" />
+                    <label>TWITTER</label>
+                </div>
+                <div class="col col-offset-20">
+                    <a ng-click="twitterClick()" class="fontBlack" style="font-size:12px;" href="" ng-class="{ 'disabled-connection': !isconnected_twitter}">{{ twitter }}</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-50">
+                    <img class="img-settings" src="img/googleIcon.png" alt="google" align:"middle" style="margin-right:8px;" />
+                    <label>GOOGLE</label>
+                </div>
+                <div class="col col-offset-20">
+                    <a ng-click="googleClick()" class="fontBlack" href="" style="font-size:12px;" ng-class="{ 'disabled-connection': !isconnected_google}">{{ google }}</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-50">
+                    <img class="img-settings" src="img/windowIcon.png" alt="microsoft" align:"middle" style="margin-right:8px;" />
+                    <label>MICROSOFT</label>
+                </div>
+                <div class="col col-offset-20">
+                    <a ng-click="microsoftClick()" class="fontBlack" href="" style="font-size:12px;" ng-class="{ 'disabled-connection': !isconnected_microsoft}">{{ microsoft }}</a>
+                </div>
+            </div>
+        </div>
+        <label ng-click="expandPreferences('#pref')" class="item greyBarStyle" ng-class="{ 'disabled-grey-bar': isexpanded_preferences, 'enabled-grey-bar': !isexpanded_preferences }">
+            <div class="item-content disable-pointer-events">
+                <span class="item-icon-right">COMMUNICATION PREFERENCES</span>
+                <i style="font-size:25px; float:right" ng-class="{ 'ion-ios-arrow-down': isexpanded_preferences, 'ion-ios-arrow-right': !isexpanded_preferences }"></i>
+            </div>
+        </label>
+
+        <div style="display:none" id="pref">
+            <ul>
+                <li class="item item-toggle" style="border:0px; ">
+                    <label>Turn Push Notifications ON</label>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" />
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle" style="border:0px;">
+                    <label>
+                        It's OK to send TEXT (SMS)
+                        <label style="white-space: pre-line; color:#e69905;">
+                            CARRIER RATES MY APPLY
+                        </label>
+                    </label>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" />
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+            <form novalidate name="phoneForm" ng-valid-submit>
+                <div class="list list-inset" style="margin-top:0px; margin-bottom:8px; white-space:nowrap;">
+                    <div class="item item-input inputedit marginInputTextDependents">
+                        <input  type="text" ng-model="personalInfo.phone" class="colorplaceholder" my-mask="'phone'"/>
+                    </div>
+                    <br>
+                    <button type="submit" class="button-block btn-Save fontBold" style="font-size:15px; padding:5px;" ng-disabled="personalInfo.phone == null" ng-click="savePhoneNumber()">SAVE MOBILE NUMBER</button>
+                </div>
+            </form>
+            <ul>
+                <li class="item item-toggle" style="border:0px;">
+                    <label>EMAIL links to statements and EOBs</label>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" />
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle" style="border:0px;">
+                    <label>Send hardcopies via MAIL</label>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" />
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <label ng-click="expandSecurity('#sec')" class="item greyBarStyle" ng-class="{ 'disabled-grey-bar': isexpanded_security, 'enabled-grey-bar': !isexpanded_security }">
+            <div class="item-content disable-pointer-events">
+                <span class="item-icon-right">SECURITY</span>
+                <i ng-class="{ 'ion-ios-arrow-down': isexpanded_security, 'ion-ios-arrow-right': !isexpanded_security }" style="font-size:25px; float:right"></i>
+            </div>
+        </label>
+
+        <div style="display:none" id="sec">
+            <form name="securityForm">
+                <ul>
+                    <li class="item item-toggle" style="border:0px;">
+                        <label>
+                            Enable Two-Factor Login
+                            <label style="white-space: pre-line; color:#e69905;">
+                                AN EXTRA LAYER OF SECURITY REQUIRES AN
+                                ADDITIONAL CODE (SEND VIA TEXT) AT LOGIN
+                            </label>
+                        </label>
+                        <label class="toggle toggle-positive">
+                            <input type="checkbox" />
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+                <div class="list list-inset" style="margin-top:0px; margin-bottom:8px;">
+                    <label class="item item-input inputedit marginInputTextDependents" style="margin-bottom: 5px;">
+                        <input type="text" placeholder="" class="colorplaceholder" ng-model="personalInfo.phone2" my-mask="'phone'">
+                    </label>
+                    <p style="font-size:17px;">Security Questions:</p>
+                    <div class="item item-input item-select colorplaceholder
+                        inputedit marginInputTextDependents selectStandard"
+                         style="padding-top:100px;">
+                        <select required id="placeholderSelect"
+                                ng-model="newDep.Relationship" data-tap-disabled="true">
+                            <option value="" class="optionSelectText">SELECT FROM THE LIST</option>
+                            <option value="1" class="optionSelectText">1</option>
+                            <option value="2" class="optionSelectText">2</option>
+                        </select>
+                    </div>
+                    <div class="item item-input item-select colorplaceholder
+                        inputedit marginInputTextDependents selectStandard"
+                         style="padding-top:100px; margin-top:5px;">
+                        <select required id="placeholderSelect"
+                                data-tap-disabled="true">
+                            <option value="" class="optionSelectText">ENTER YOUR ANSWER TO SECURITY QUESTION 1</option>
+                            <option value="1" class="optionSelectText">1</option>
+                            <option value="2" class="optionSelectText">2</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button class="button-block btn-Save fontBold" style="font-size:15px; padding-right:25px; padding-left:25px;" ng-disabled="securityForm.$invalid">SAVE UPDATES</button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

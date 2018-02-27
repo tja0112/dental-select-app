@@ -1,0 +1,223 @@
+ #footerSearch{
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.paddingMenu{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #888888;
+}
+
+#paddingName{
+    padding-left: 25px;
+}
+
+/*#headertop img{
+    text-align: center;
+    height: 40px;   
+}
+
+#headertop h2{
+    letter-spacing: 1pt;
+    font-weight: bold;
+}*/
+
+#headertopcard img{
+    height: 30px;
+    padding-left: 10px;
+}
+
+#cardTitle { /*eliminar*/
+    color: #FFFFFF;
+    text-align: right;
+    font-size: 20px;
+    letter-spacing: .5pt;
+    padding-right: 5px;
+}
+
+/*#centerText{
+    white-space: pre-line;
+    padding: 15px;
+    color: white;
+    border: 1px solid #ddd;;
+}*/
+
+#centerTextInfo{
+    white-space: pre-line;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+#personalInfo p{
+    letter-spacing: 1pt;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*.button.button-block{
+   letter-spacing: .5pt;
+   font-size: 11px;
+}*/
+
+/*.button.button-small{
+    display: inline-block;
+    padding-left: 5px; 
+}*/
+
+#textSizeInfoCard{
+    font-size: 12px;
+
+}
+
+#viewDependents{ /*eliminar*/
+    background:#808080; 
+    color:white; 
+}
+
+.buttonTransparentfindProvider label{
+    background-color:transparent;
+    border-width: 2px;
+}
+
+.buttonTransparentfindProvider label>select{
+    background-color: transparent;
+}
+
+.buttonTransparentfindProvider label>div{
+    color: #e3e3e3;
+    font-size: 10px;
+    padding-left: 8px;
+}
+
+#mediumFont{
+    font-size: 12px;
+}
+
+#bigFont{
+    font-size: 14px;
+}
+
+#standardFont{
+    font-size: 12px;   
+}
+
+#smallFont{
+    font-size: 8px;
+}
+
+.imageSize{
+    width: 35px;
+    height: 30px;
+    /*text-align: center;
+    vertical-align: middle;*/
+}
+
+hr {
+    border: 0;
+    height: 4px; 
+    text-align: center;
+    background-image: -webkit-linear-gradient(left, #fff, #ddd, #fff);
+ }
+
+ .placeholderWhite::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: white !important;
+  font-size: 10px;
+
+}
+
+/*i{
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 10px;
+}*/
+
+.arrows{
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:-20px;
+    padding: 0px;
+}
+
+.middleFooter{
+    background:#888888;
+    letter-spacing:1pt;
+    font-size:10px;
+    white-space:pre-line;
+    line-height:10px;
+    padding-left:5px;
+    border:1px solid #888888;
+    color: white;
+}
+
+.middleFooter p{
+    letter-spacing:1pt;
+    font-size:10px;
+    white-space:pre-line;
+    line-height:10px;
+    color: white;
+    margin-top: -3px;
+    padding-left:5px;
+}
+
+.bottomFooter{
+    line-height:0px; 
+    margin-top:-4px; 
+    margin-right:5px;
+}
+
+.searchImage{
+    background-image: url("../img/search.png");
+    background-size: 25px 20px;
+    margin-bottom: -20px;
+    margin-left: 5px;
+    padding: 20px;
+    background-repeat: no-repeat;
+}
+
+.testsearchImage{
+    background-image: url("../img/search.png");
+    background-size: 18px 15px;
+    padding: 12px;
+    /*margin-top: 0px;
+    padding: 12px;*/
+  
+   
+    /*margin-left: 9px;*/
+
+    background-repeat: no-repeat;
+}
+
+#marginTopCards{
+    margin-top: -40px;
+}
+
+#marginIcons{
+    margin-left: -10px;
+    margin-right: 5px;
+}
+
+/*.placeholder-icon:first-child {
+    padding-right: 10px;
+}
+
+.card .item.item-input input, .list-inset .item.item-input input, .padding > .list .item.item-input input, .padding-horizontal > .list .item.item-input input {
+    padding-right: 0px;
+}*/
+
+
+
+
+
+
+
+
+
+
+

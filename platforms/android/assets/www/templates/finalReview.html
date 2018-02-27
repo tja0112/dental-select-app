@@ -1,0 +1,81 @@
+<!--<link rel="stylesheet" type="text/css" href="css/finalReview.css"> -->
+<ion-view>
+
+  <div class="bar bar-subheader" id="subheadertitle">
+    <h4 class="title" id="subheaderFont">FINAL REVIEW</h4>
+  </div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+  <div class="list card" id="ShadowFinalReview" ng-repeat="plan in plans">
+
+    <div class="row item blueController" style="padding: 0px;">
+      <div class="col col-67">
+        <h3 id="cardTitle" class="fontBold">{{ plan.Plan.PlanName }}</h3>
+      </div>
+
+      <div class="col ">
+          <a href="#/app/addDependents2" ng-click="clickEditPlan($index)" type="button" class="button button-small button-block blueController fontBold text-center" id="buttonPlan" style="border-color: white !important; letter-spacing: 1pt !important;">
+            EDIT PLAN 
+        </a>
+      </div>
+    </div>
+      
+    <div class="row item" style="padding: 0px;">
+      <div class="col col-33">
+                    <center><h5 id="centerText" class="fontMedium">{{ plan.CoverageCode.Name }}</h5></center>
+        </div>
+        <div class="col col-33">
+                    <center><h5 id="centerText" class="fontMedium">{{ plan.Plan.Network }}</h5></center>
+         </div>
+         <div class="col col-33">
+                    <center><h5 id="centerText" class="fontMedium">{{ plan.Plan.ID }}</h5></center>
+           </div>
+         </div>
+
+         <div class="row item fontMedium" style="padding: 0px;">
+
+                <div class="col col-80 fontMedium" id="viewDependentsFinalReview" style="font-size:9px; letter-spacing: 1px;">
+                    VIEW INDIVIDUAL COVERED
+           <!--  <ion-spinner icon="ios-small" ng-show="plan.processing" class="col col-80 text-right" style="margin-top:-30px; margin-left:-10px; position:absolute; stroke:white;"></ion-spinner> -->
+          </div>
+
+          <div class="col col-20" id="viewDependentsFinalReview">
+            <button ng-show="plan.Dependents.length > 0" ng-click="expand($index)" class="button-clear button-block"  style="color:white; letter-spacing: .5pt !important;
+   font-size: 12px !important; margin-top:0px;  line-height:0px !important;">
+   <div ng-class="{ 'circle-minus': plan.isexpanded, 'circle-plus': ! plan.isexpanded}"  style="position:relative; width:17px; height:17px; margin:0 15px;"></div>
+            </button>
+          </div>
+        </div>
+	
+        <div style="display: none" class="col col-offset-5" id="disp_{{ $index }}">
+              <table class="stripes">
+                    <tbody>
+                  <tr ng-repeat="item in plan.Dependents">
+                   <td>{{item.FirstName}} {{item.LastName}}</td>
+                            <td>{{item.Relation.Text}}</td>
+                 </tr>                 
+                </tbody>
+              </table>
+          </div>
+      </div>
+      
+          <br>
+            <center><h3 id="registrationMember" style="color:black; line-height:25px;" class="fontBold">SUBTOTAL</h3></center>       
+
+          <div id="personalInfo" style="margin-bottom:40px;">
+            <p id="registrationMember" style="font-size: 25px !important; color:black;" class="fontBold">$ {{ amountpermonth }} PER MONTH</p>
+          </div>
+
+        <div class="col text-center">
+            <a href="" ng-click="DoSubmit()" class="button blueController button-block button-small fontBold">
+                SUBMIT & COMPLETE
+            </a>
+        </div>
+          
+
+</ion-content>
+</ion-view>

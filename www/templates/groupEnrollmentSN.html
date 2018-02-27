@@ -1,0 +1,44 @@
+<!--<link rel="stylesheet" type="text/css" href="css/groupEnrollmentSN.css">    -->
+
+<ion-view>
+    <!-- ion-nav-bar class="blueController" style="border-bottom-color:red ;" >
+      <ion-nav-title  >
+        <img class="title" src="img/dentalSelectLogo.png" style=" margin:auto; display:block"></img>
+      </ion-nav-title>
+      <ion-nav-back-button class="blueController">
+        <i class="icon ion-chevron-left">
+      </ion-nav-back-button>
+    </ion-nav-bar> -->
+
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">GROUP ENROLLMENT</h4>
+    </div>
+    <ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+        <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+        <form ng-valid-submit="DoSubmit()" novalidate>
+            <label class="item item-input inputedit inputMarginGroup">
+                <input type="text" ng-model="Employee.FirstName" required placeholder="EMPLOYEE FIRST NAME" class="colorplaceholder">
+            </label>
+            <label class="item item-input inputedit inputMarginGroup">
+                <input type="text" ng-model="Employee.LastName" required placeholder="EMPLOYEE LAST NAME" class="colorplaceholder">
+            </label>
+            <label class="item item-input inputedit inputMarginGroup">
+                <input type="date" ng-model="Employee.DateBirth" required placeholder="DATE OF BIRTH" class="colorplaceholder">
+            </label>
+            <label class="item item-input inputedit inputMarginGroup">
+                <input type="text" my-mask="'ssn'" ng-model="Employee.SSN" required placeholder="SOCIAL SECURITY NUMBER"
+                       class="colorplaceholder" id="ssn">
+            </label>
+            <div class="inputMarginGroupButton">
+                <input type="submit" value="SUBMIT" class="button blueController button-block button-small submitButton fontBold" />
+            </div>
+            <!-- <ul class="fonterror"> -->
+                <!-- <li ng-repeat="x in errors">{{x}}</li> -->
+            <!-- </ul> -->
+            <ul class="list">
+                <li class="item label-size no-background" style="color: red;" ng-repeat="e in errorsview">{{e}}</li>
+            </ul>
+        </form>
+    </ion-content>
+</ion-view>
+

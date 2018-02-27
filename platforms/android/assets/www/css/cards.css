@@ -1,0 +1,101 @@
+/*#style-four {
+    height: 8px;
+    border: 0;
+    box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    width: 250px;
+}*/
+
+.col{
+    vertical-align: middle;
+    padding: 0px;
+}
+
+.row{
+    padding: 0px;
+}
+
+#paddingName{
+    padding-left: 25px;
+}
+
+#headertop img{
+    text-align: center;
+    height: 40px;
+}
+
+#headertop h2{
+    letter-spacing: 1pt;
+    font-weight: bold;
+}
+
+#headertopcard img{
+    height: 30px;
+    padding-left: 10px;
+}
+
+#cardTitle {
+    color: #FFFFFF;
+    text-align: right;
+    font-size: 13px;
+    letter-spacing: .5pt;
+    padding: 10px;
+}
+
+.button.button-positive{
+    border-color: white;
+}
+
+#centerText{
+    white-space: pre-line;
+    padding: 15px;
+    color: white;
+    border: 1px solid #ddd;
+}
+
+#centerTextInfo{
+    white-space: pre-line;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.col.col-50{
+    padding: 0px;
+}
+
+#personalInfo p{
+    letter-spacing: 1pt;
+    font-size: 15px;
+    text-align: center;
+}
+
+.button.button-block{
+   letter-spacing: .5pt;
+   font-size: 11px;
+}
+
+#textSizeInfoCard{
+    font-size: 12px;
+
+}
+
+#viewDependents{
+    background:#808080; 
+    color:white; 
+    font-size:11px; 
+    margin-right:1px;
+}
+
+#viewDependents h3{
+    color: white;
+}
+
+.card{
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+
+.list.card{
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+

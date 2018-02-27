@@ -1,0 +1,40 @@
+/*#headertop img{
+    text-align: center;
+    height: 40px;
+}
+
+#headertop h2{
+    letter-spacing: 1pt;
+    font-weight: bold;
+}
+
+:placeholder-shown {
+  letter-spacing: 1pt;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 10px;
+}
+
+input,
+input::-moz-input-placeholder {
+    font-size: 10px;
+}
+
+input,
+input::input-placeholder {
+    font-size: 10px;
+}*/
+
+/*.col{
+	padding: 0px;
+}
+
+.row{
+	padding: 0px;
+}*/
+
+/*.button{
+	width: 100px;
+}

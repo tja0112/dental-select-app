@@ -1,0 +1,110 @@
+<!--  <link rel="stylesheet" type="text/css" href="css/planSummary1.css">
+  <link rel="stylesheet" type="text/css" href="css/idcards.css">
+  <link rel="stylesheet" type="text/css" href="css/finalReview.css"> -->
+
+
+<ion-view hide-back-button="true" my-block="processing">
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">ID CARDS</h4>
+    </div>
+
+    <ion-content padding="true" class="has-subheader scroll-content ionic-scroll">
+        <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+        <div class="text-center" ng-show="model.dependents.length == 0">
+            <h3>No Information</h3>
+        </div>
+        <div ng-repeat="item in model.dependents" style="margin-top:-10px;">
+            <div class="list card">
+                <div class="row item blueController" style="border-width:0px; padding-top:0px;">
+                    <div class="icon col col-50">
+                        <img style="max-width: 105px; max-height:75px;  left:3px;" src="img/DS_Mark_W.png">
+                    </div>
+                    <div class="col col-50" style="text-align:right; ">
+                        <h6 style="color:white; letter-spacing:1.2px; font-size:18px; line-height:31px" class="fontBold">{{item.LOBType }} </h6>
+                    </div>
+                </div>
+                <div class="row item" style="border-width:0px;">
+                    <div class="col col-50 ">
+                        <left>
+                            <label style="line-height:25px; font-size:21px" class="fontBold"><B>{{item.FirstName+" "+item.LastName}}</B></label>
+                        </left>
+                    </div>
+                    <div class="col col-50 fontBold" style="text-align:right;">
+                        <label style="line-height: 25px; font-size:21px" for=""><b>ID:</b></label>
+                        <label style="line-height: 25px; font-size:21px" for=""><b>{{item.ID}}</b></label>
+                    </div>
+                </div>
+                <div class="row item text-center fontMedium" style="border-width:0px; padding-left:0px; padding-right:0px;">
+                    <div class="col" id="borderColumn">
+                        <div>
+                            <h6 style="font-size:13px" class="fontMedium">EFFECTIVE</h6>
+                        </div>
+                        <div>
+                            <h5 style="font-size:16px" class="fontMedium">{{item.DateEffective}}</h5>
+                        </div>
+                    </div>
+                    <div class="col" id="borderColumn">
+                        <center>
+                            <div>
+                                <h6 style="font-size:13px" class="fontMedium">PLAN</h6>
+                            </div>
+                            <div>
+                                <h5 style="font-size:16px" class="fontMedium">{{item.Plan}}</h5>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div class="row item" style="border-width:0px; padding-left:0px; padding-right:0px;">
+                    <div class="col" id="borderColumn">
+                        <center>
+                            <div>
+                                <h6 style="font-size:13px" class="fontMedium">GROUP ID </h6>
+                            </div>
+                            <div>
+                                <h5 style="font-size:16px" class="fontMedium">{{item.GroupID}}</h5>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="col" id="borderColumn">
+                        <center>
+                            <div>
+                                <h6 style="font-size:13px" class="fontMedium">NETWORKS </h6>
+                            </div>
+                            <div>
+                                <h5 style="font-size:16px" class="fontMedium">{{item.NetWork}}</h5>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom:5px;">
+                    <div class="col">
+                        <center>
+                            <h6 id="centerTextIdcards font" style="font-size:13px;  line-height:10px; " class="fontMedium">Please Call Dental Select to verify coverage and out-of-network coverage.</h6>
+                            <h6 id="centerTextIdcards font" style="font-size:13px; line-height:10px; " class="fontMedium"><a href="tel:+801-495-3000">801.495.3000</a> | Toll Free <a href="tel:+1-800-999-9789">1.800.999.9789</a> | Toll Free Fax <a href="tel:+1-888-998-9705">1.888.998.9705</a></h6>
+                            <h6 id="centerTextIdcards font" style="font-size:13px; line-height:10px; " class="fontMedium">5373 S Green,4th Floor | Salt Lake City,UT 84123 | dentalselect.com</h6>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:-20px">
+                <div class="col col-50">
+                    <div class="col-offset-10">
+                        <a href="" class="button  blueController button-block button-small fontBold centerTextPaymentButton" style="font-size:11px; height:45px;">
+                            ADD TO {{buttonAlias}}
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-offset-10">
+                        <a href="" class="button button-positive button-outline button-block button-small fontBold" style="line-height: 40px; height:45px; font-size:11px; ">
+                            EMAIL TO PROVIDER
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+

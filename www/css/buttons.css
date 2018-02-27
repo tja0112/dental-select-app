@@ -1,0 +1,307 @@
+﻿.submitButton {
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: 15px !important;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+}
+
+.NoPaddingButton {
+    width: 145px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+}
+
+.continueButton {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+}
+
+.groupEnrollmentButton {
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+}
+
+.mapButton {
+    width: 60px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    font-size: 10px;
+}
+
+.waiveCoverageButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+    height: 40px;
+}
+
+.beginEnrollmentButton {
+    font-size: 15px !important;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+}
+
+.groupEnrollmentButton {
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+}
+
+#yesnoButtons {
+    font-size: 10px;
+    letter-spacing: 1pt;
+}
+
+.buttonTransparentBottom label > div {
+    color: #ababab;
+    font-size: 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: -10px;
+    height: 40px;
+}
+
+.buttonSquare {
+    border-color: transparent;
+    background-color: #888888;
+    color: #444;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.buttonSquarePlanSummary {
+    border-color: transparent;
+    background-color: #888888;
+    color: #444;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 34px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+#centerButton {
+    font-size: 15px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+}
+
+#centerLargeButton {
+    width: 200px;
+    font-size: 15px;
+    letter-spacing: 1pt;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+}
+
+#centerSmallButton {
+    width: 140px;
+    font-size: 15px;
+    letter-spacing: .5pt;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+    height: 40px;
+}
+
+.AddDependentsButtons {
+    width: 100px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 1pt;
+    border-radius: 2px;
+}
+
+.bluebuttonController {
+    background-color: #0080c6;
+    color: white;
+    border: #0080c6;
+}
+
+.paymentInfoButtons {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    font-size: 10px !important;
+    width: 50% !important;
+    line-height: 15px !important;
+    min-height: 15px !important;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+.loginMarginButton {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.inputMarginGroupButton {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a.button-outline {
+    line-height: 34px;
+}
+
+@media screen and (min-width:800px) {
+
+    .centerTextPaymentButton {
+        line-height: 20px !important;
+        padding-top:10px;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:780px) {
+
+    .centerTextPaymentButton {
+        line-height: 40px !important;
+        
+    }
+}
+
+@media screen and (min-width:331px) and (max-width:399px) {
+
+    .centerTextPaymentButton {
+        line-height: 20px !important;
+        padding-top:10px;
+    }
+}
+
+@media screen and (max-width:330px) {
+
+    .centerTextPaymentButton {
+        line-height: 20px !important;
+        padding-top:10px;
+    }
+}
+
+#buttonFont {
+    letter-spacing: 1pt;
+}
+
+#buttonPlan {
+    margin-top: 1px !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    min-height: 20px !important;
+    border-radius: 2px;
+    border: 1px solid;
+    height: 25px;
+}
+
+.button.button-positive {
+    border-color: white;
+}
+
+.button.button-block {
+    letter-spacing: .5pt;
+    font-size: 15px;
+}
+
+.buttonTransparentfindProvider label {
+    background-color: transparent;
+    border-width: 2px;
+}
+
+    .buttonTransparentfindProvider label > select {
+        background-color: transparent;
+    }
+
+    .buttonTransparentfindProvider label > div {
+        color: #e3e3e3;
+        font-size: 10px;
+        padding-left: 8px;
+    }
+
+.buttonTransparentProvider label {
+    background-color: transparent;
+    border-radius: 2px !important;
+}
+
+    .buttonTransparentProvider label > select {
+        background-color: transparent;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .buttonTransparentProvider label > div {
+        color: #e5e5e5;
+        font-size: 8px;
+        letter-spacing: 1pt;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: -10px;
+        padding-left: 5px;
+    }
+
+.buttonTransparentBottomProvider label {
+    background-color: transparent;
+    border-radius: 2px !important;
+    border: solid;
+    border-color: #ababab;
+    border-width: 1px !important;
+    font-size: 8px;
+}
+
+    .buttonTransparentBottomProvider label > select {
+        background-color: transparent;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .buttonTransparentBottomProvider label > div {
+        color: #ababab;
+        font-size: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: -10px;
+    }
+
+.buttonTransparentBottomProvider {
+    margin: auto;
+    display: block;
+}
+
+.bttn {
+    font-size: 12px !important;
+    padding-left: 19px !important;
+    padding-right: 19px !important;
+}

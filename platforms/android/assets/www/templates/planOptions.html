@@ -1,0 +1,59 @@
+
+<ion-view>
+
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">PLAN OPTIONS</h4>
+    </div>
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+    <center>
+    	<h2 id="titlePassivePPO" class="fontBlack" style="line-height:20px; margin-top:15px;">{{PlanName}}</h2>
+		<div style ="color:#0080c6; letter-spacing:1.5px; margin-bottom:10px;" class="fontBold">{{Network}}</div>
+		 <br>
+
+		<p id="helpInfoPlanOptions" style="color:#999999; letter-spacing: 1px;" class="fontBold">YOU HAVE ENTERED INFO FOR YOURSELF AND 3 DEPENDETS,
+        	                                    SELECT YOUR COVERAGE BELOW:
+        </p>
+
+    </center>
+   
+    <br>
+       
+    <form ng-valid-submit="DoSelect(model.CoverageCode)" novalidate>
+		<!-- <label class="item item-input item-select colorplaceholder inputedit buttonTransparentBottom" style="padding-top:100px;">
+			<div class="input-label" id="placeholderSelect" aria-label="SPOUSE">
+				COVERAGE
+			</div>
+			<select data-tap-disabled="true" required ng-disabled="Processing" ng-model="model.CoverageCode" id="placeholderSelect">
+                   <option value="Opt1" class="optionSelectText">Opt1</option>
+                    <option value="OPt2" class="optionSelectText">OPt2</option>
+			</select>
+		</label> -->
+
+
+
+            <div class="item item-input item-select colorplaceholder 
+                        inputedit buttonTransparentBottom selectStandard" 
+                 style="background-color: transparent; border-radius: 2px !important; 
+                        border: solid; border-color: #ababab; 
+                        border-width: 1px !important;  font-size: 8px; padding-top:100px;" >
+                <select data-tap-disabled="true" required ng-disabled="Processing" ng-options="item as item.Name for item in model.CoverageCodes track by item.CoverageCodeId" ng-model="model.CoverageCode" id="placeholderSelect">
+                    <option value="">COVERAGE</option>
+                </select>
+            </div>
+     <ul class="fonterror">
+      <li ng-repeat="x in errors.view">{{x}}</li>
+    </ul>
+
+        
+    <div class="text-center">
+        <input type="submit"  value="SELECT" ng-disabled="Processing" class="button button-block blueController button-small submitButton fontBold"/>      
+   
+    </div> 
+        
+    </form>
+</ion-content>
+</ion-view>

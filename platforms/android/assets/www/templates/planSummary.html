@@ -1,0 +1,181 @@
+
+<ion-view hide-back-button="true" my-block="processing">
+
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">PLAN SUMMARY</h4>
+    </div>
+    <ion-content padding="true" class="has-subheader scroll-content ionic-scroll">
+
+        <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+        <div class="text-center" ng-show="model.PlanList == 0">
+            <h3>No Information</h3>
+        </div>
+        <div class="list card" style="border-radius:0px;" ng-repeat="card in model.PlanList">
+            <div class="item blueController" id="cardTitle" style="border-radius:0px; padding-top: 8px !important;">
+                <h3 id="cardTitlePlanSummary" class="fontBold">{{ card.PlanName }}</h3>
+            </div>
+
+            <div class="row item" style="padding:0px;" ng-show="model.IDP">
+                <div class="col col-33" style="border-left-color: white; border-right-color: white;">
+                    <h6 class="text-center" style="border:none; font-size:21px" id="centerTextPlanSummary">{{ card.CoverageCodeName }}</h6>
+                </div>
+                <div class="col col-33" style="border-left-width: 2px; font-size:21px; border-right-width: 2px;">
+                    <h6 class="text-center" style="border:none;" id="centerTextPlanSummary">{{ card.Network }}</h6>
+                </div>
+                <div class="col col-33" style="border-left-color: white; font-size:21px; border-right-color: white;">
+                    <h6 class="text-center" style="border:none;" id="centerTextPlanSummary">${{ card.Cost }} PER MONTH</h6>
+                </div>
+            </div>
+
+
+            <div class="row item" style="padding:0px;" ng-show="!model.IDP">
+                <div class="col col-50" style="border-left-width: 2px; font-size:21px; border-right-width: 2px;">
+                    <h6 class="text-center" style="border:none;" id="centerTextPlanSummary">{{ card.CoverageCodeName }}</h6>
+                </div>
+                <div class="col col-50" style="border-left-color: white; font-size:21px; border-right-color: white;">
+                    <h6 class="text-center" style="border:none;" id="centerTextPlanSummary">{{ card.Network }}</h6>
+                </div>
+            </div>
+
+
+            <div class="item" style="padding:0px; cursor:pointer; margin-top:5px" ng-click="expand($index)">
+                <div class="row item fontMedium" style="padding: 0px;">
+
+                    <div class="col col-80 fontMedium" id="viewDependentsFinalReview" style="font-size:9px; letter-spacing: 1px;">
+                        VIEW INDIVIDUAL COVERED
+                        <!--  <ion-spinner icon="ios-small" ng-show="plan.processing" class="col col-80 text-right" style="margin-top:-30px; margin-left:-10px; position:absolute; stroke:white;"></ion-spinner> -->
+                    </div>
+
+                    <div class="col col-20" id="viewDependentsFinalReview">
+                        <button ng-show="card.HasDependents" class="button-clear button-block" style="color:white; letter-spacing: .5pt !important; font-size: 12px !important; margin-top:0px;  line-height:0px !important;">
+                            <div ng-class="{ 'circle-minus': card.isexpanded, 'circle-plus': !card.isexpanded }" style="position:relative; width:17px; height:17px; margin:0 15px;"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div style="display: none" class="col col-offset-5" id="disp_{{ $index }}">
+                    <table class="stripes">
+                        <tbody>
+                            <tr ng-repeat="item in card.Dependents">
+                                <td>{{item.FirstName}} {{item.LastName}}</td>
+                                <td>{{item.Relation.Text}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+
+
+            <div ng-click="expandnetwork($index)" class="item" style="padding:0px; margin-top:5px; cursor:pointer;">
+                <div class="row item fontMedium" style="padding: 0px;">
+                    <div class="col col-80 fontMedium" id="viewDependents" style="padding:0px 0px 0px 0px;">
+                        <label class="item addDependentsToPlan fontMedium" style="letter-spacing:1px;">
+                            VIEW PLAN SUMMARY & CERTIFICATE
+                            <ion-spinner icon="ios-small" ng-show="card.processingplansummary" class="col text-right" style="margin-top:-20px; margin-left:-10px; position:absolute; stroke:white;"></ion-spinner>
+                        </label>
+                    </div>
+
+                    <div class="col col-20 " id="viewDependents" style="padding: 0px;">
+                        <button ng-show="card.HasNetworks" class="buttonSquare button-clear button-block" style="background:#888888; color:white; font-size: 14px; margin-top: -1px; margin-bottom: 0px; line-height:0px;">
+                            <div class="circle-plus" ng-class="{ 'circle-minus': card.isexpanded_networks, 'circle-plus': !card.isexpanded_networks }" style="position:relative; color:white; cursor:pointer; width:17px; height:17px; margin:0 15px;">
+                            </div>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:none;" id="net_{{$index}}" my-block="loadingListPlans">
+                <div class="tabbed_area" style="margin-top:25px;">
+
+                    <ul class="tabs col-90 text-center" style="margin:auto;  width:100%;">
+                        <li style="margin-bottom:10px;">
+                            <a href="" ng-click="tabSwitch($index, '#tab_1_' + $index, '#content_1_' + $index)" id="tab_1_{{$index}}" class="tab-item active"
+                               style="margin:0px; margin-right:-60px; width:100%; padding-top:1px;">IN-NETWORK</a>
+                        </li>
+                        <li><a href="" class="tab-item" style="margin:0px; margin-right:-60px; width:100%; padding-top:1px;" ng-click="tabSwitch($index, '#tab_2_' + $index, '#content_2_' + $index)" id="tab_2_{{$index}}">OUT-OF-NETWORK</a></li>
+                    </ul>
+
+                    <br><br>
+
+                    <div id="content_1_{{$index}}">
+                        <div class="plansummary fontBold col-50" style="margin-top:-60px; font-size:20px">
+                            PLAN SUMMARY
+                        </div>
+
+
+                        <div class="col-90 tb">
+                            <table class="stripes">
+                                <tr ng-repeat="item in model.PlanList[$index].onNetworkList">
+                                    <td>
+                                        {{item.Type}} <br>
+                                        {{ item.Description }}
+                                        <!-- <tr></td><div class="textleft">{{ item.Type }}</div></tr>
+                                        <tr><div class="textleft">{{ item.Description }}</div></tr> -->
+                                    </td>
+                                    <!-- <br>Cleanings(2 per year) ,<br>exams, &amp; x - rays</div> -->
+                                    <td>
+                                        <div class="text-center">{{ item.CoveragePercentage }}%</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="ace col-70 fontMedium">
+                            <!--This plan of insurance is underwritten by ACE<br>American Insurance Company-->
+                        </div>
+                    </div>
+
+                    <div id="content_2_{{$index}}" style="display:none;">
+                        <div class="plansummary fontBold col-50" style="margin-top:-60px;">
+                            PLAN SUMMARY
+                        </div>
+
+                        <div class="col-90 tb">
+                            <table class="stripes">
+                                <tr ng-repeat="item in model.PlanList[$index].offNetworkList">
+                                    <td>
+                                        {{item.Type}} <br>
+                                        {{ item.Description }}
+                                        <!-- <tr></td><div class="textleft">{{ item.Type }}</div></tr>
+                                        <tr><div class="textleft">{{ item.Description }}</div></tr> -->
+                                    </td>
+                                    <!-- <br>Cleanings(2 per year) ,<br>exams, &amp; x - rays</div> -->
+                                    <td>
+                                        <div class="text-center">{{ item.CoveragePercentage }}%</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <div class="ace col-70 fontMedium">
+                                <!--   This plan of insurance is underwritten by ACE<br>American Insurance Company-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <script>
+
+        //   tabSwitch = function(new_tab, new_content){
+        //     $("#content_1").css("display", "none");
+        //     $("#content_2").css("display", "none");
+        //     $("#" + new_content).css("display", "block");
+
+        //     $("#tab_1").removeClass("active");
+        //     $("#tab_2").removeClass("active");
+        //     $("#" + new_tab).addClass("active");
+        //   };
+
+        // </script>-->
+
+
+    </ion-content>
+</ion-view>

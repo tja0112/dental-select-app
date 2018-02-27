@@ -1,0 +1,155 @@
+<!--<link href="css/setup.css" rel="stylesheet">-->
+<ion-view>
+
+<!-- <ion-nav-bar class="blueController" style="border-bottom-color:red ;" >
+	    <ion-nav-title  >
+	  		<img class="title" src="img/dentalSelectLogo.png" style=" margin:auto; display:block"></img>
+	    </ion-nav-title>   
+	    <ion-nav-back-button class="blueController">
+	      <i class="icon ion-chevron-left"></i>
+	    </ion-nav-back-button>
+    </ion-nav-bar> -->
+  
+  <div class="bar bar-subheader" id="subheadertitle">
+    <h4 class="title" id="subheaderFont">SET UP YOUR ACCOUNT</h4>
+  </div>
+
+  <ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+  <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+  <form ng-valid-submit="DoContinue()" novalidate>	
+  	
+
+		  <label class="item item-input inputedit inputMarginGroup">
+		    <i class=""></i>
+		    <input ng-model="SetUpAccount.Email" required ng-disabled="Processing" type="email" placeholder="EMAIL" class="colorplaceholder">
+		  </label>
+	  	
+
+		  <!-- <label class="item item-input inputedit inputMarginGroup"> -->
+		    <!-- <i class=""></i> -->
+		    <!-- <input ng-model="SetUpAccount.Pass" required ng-disabled="Processing" type="password" placeholder="PASSWORD" class="colorplaceholder"> -->
+		  <!-- </label> -->
+	
+		  <!-- <label class="item item-input inputedit inputMarginGroup"> -->
+		    <!-- <i class=""></i> -->
+		    <!-- <input ng-model="SetUpAccount.RePass" required ng-disabled="Processing" type="password" placeholder="RE-ENTER PASSWORD" class="colorplaceholder"> -->
+		  <!-- </label> -->
+      
+          <div class="inputMarginGroupButton">
+              <input type="submit" ng-disabled="Processing" value="CREATE ACCOUNT" class="button button-small button-block blueController fontBold" id="centerButton" />
+          </div>
+
+          <ul class="fonterror">
+              <li ng-repeat="x in errors.view">{{x}}</li>
+          </ul>
+      
+	
+
+	</form>
+
+
+      <ul class="list">
+          <li class="item label-size no-background" style="color: red;" ng-repeat="e in errorsview">{{e}}</li>
+      </ul>
+
+
+       <div class="imgor">
+		<img src="img/orImage.png" id="mor"/>
+		</div>
+	
+
+
+<div class="textSign fontBold">
+<p>SIGN IN WITH:</p>
+</div>
+
+
+<div class="col signscont">
+<div class="signslogobox">
+	<div class="signslogoimgfb">
+		
+			<img class="fbimg" src="img/facebookIcon.png"/>
+
+    </div>
+	<div class="signslogocaptionfb fontBold">
+
+		<p>FACEBOOK</p>
+
+    </div>
+
+
+</div>
+<div class="signslogobox">
+	<div class="signslogoimgfb">
+		
+			<img class="fbimg" src="img/yahooIcon.png"/>
+
+    </div>
+	<div class="signslogocaptionfb fontBold">
+
+		<p>YAHOO</p>
+
+    </div>
+
+
+</div>
+<div class="signslogobox">
+	<div class="signslogoimgfb">
+		
+			<img class="fbimg" src="img/twitterIcon.png"/>
+
+    </div>
+	<div class="signslogocaptionfb fontBold">
+
+		<p>TWITTER</p>
+
+    </div>
+
+
+
+</div>
+<div class="signslogobox">
+	<div class="signslogoimgfb">
+		
+			<img class="fbimg" src="img/googleIcon.png"/>
+
+    </div>
+	<div class="signslogocaptionfb fontBold">
+
+		<p>GOOGLE</p>
+
+    </div>
+
+
+
+</div>
+<div class="signslogobox">
+	<div class="signslogoimgfb">
+		
+			<img class="fbimg" src="img/windowIcon.png"/>
+
+    </div>
+	<div class="signslogocaptionfb fontBold">
+
+		<p>MICROSOFT</p>
+
+    </div>
+
+
+</div>
+</div>
+
+<div class="col-50 hrule">
+   <hr>
+</div>
+
+<div>
+    <p id="helpInfo" class="fontMedium">
+      	By creating an account, you
+	  	agree to the <a href="" ng-disabled="Processing">Terms of Use</a>
+    </p>
+</div>
+   
+</ion-content>
+</ion-view>

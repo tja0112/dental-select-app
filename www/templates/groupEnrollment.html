@@ -1,0 +1,42 @@
+<!--<link rel="stylesheet" type="text/css" href="css/groupEnrollment.css">-->
+<ion-view>
+
+    <ion-nav-bar class="blueControllerNav" style="border-bottom-color:red ;">
+        <ion-nav-title>
+            <img class="title" src="img/dentalSelectLogo.png" style="margin:auto; display:block" />
+        </ion-nav-title>
+        <ion-nav-back-button class="blueControllerNav">
+            <i class="icon ion-chevron-left"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">GROUP ENROLLMENT</h4>
+    </div>
+
+    <ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+        <div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+        <br>
+        <form ng-valid-submit="DoSubmit();" novalidate>
+            <label class="item item-input inputedit">
+                <input type="text" ng-model="Company.Code" required ng-disabled="processing" placeholder="UNIQUE COMPANY CODE" class="colorplaceholder">
+            </label>
+            <br />
+            <p id="helpInfo" class="fontMedium" style="margin-top:-12px; margin-bottom:15px; font-size:13px;">
+                Have you lost or forgotten your company&apos;s unique code?
+                Please contact your company&apos;s HR representative.
+            </p>
+            <ul class="fonterror">
+                <li ng-repeat="x in errors.view">{{x}}</li>
+            </ul>
+            <div class="text-center">
+                <input type="submit" ng-disabled="processing" value="SUBMIT" class="button button-small button-block blueController fontBold" id="centerButton" />
+            </div>
+        </form>
+        <ul class="list">
+            <li class="item label-size no-background" style="color: red;" ng-repeat="e in errorsview">{{e}}</li>
+        </ul>
+    </ion-content>
+</ion-view>
+
+

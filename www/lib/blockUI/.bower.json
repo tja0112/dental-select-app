@@ -1,0 +1,14 @@
+{
+  "name": "blockUI",
+  "homepage": "https://github.com/ueqt/blockui",
+  "_release": "v2.65",
+  "_resolution": {
+    "type": "tag",
+    "tag": "v2.65",
+    "commit": "761d965dd43f2a190d91418a09fc03e7db0d5a66"
+  },
+  "_source": "https://github.com/ueqt/blockui.git",
+  "_target": "v2.65",
+  "_originalSource": "blockUI",
+  "_direct": true
+}

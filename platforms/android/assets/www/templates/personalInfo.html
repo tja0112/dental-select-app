@@ -1,0 +1,48 @@
+<ion-view hide-back-button="true">
+  
+	<div class="bar bar-subheader bar-light"  id="subheadertitle" >
+	  <h4 class="title" id="subheaderFont">PERSONAL INFO</h4>
+	</div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png"/></div>
+
+<br>
+	<div class="col col-60 col-offset-20">
+		<div class="fontmedium" style="font-family:TextaW00-Medium;"> 
+			<img ng-show="imagestring == null"  ng-click="launchPhotoLibrary()" src="img/person_icon.png" alt="person info"><br>
+			<img ng-show="imagestring != null"  ng-click="launchPhotoLibrary()" src="{{imagestring}}" alt="person info"><br>
+			<label style="font-family:TextaW00-Heavy; font-size:19px">{{ personalinfo.Name }}</label><br><br>
+
+			<label style="color:#0080c6; font-family:TextaW00-Black;; font-size:19px">ADDRESS</label><br>			
+            <label style="font-size:19px"><label style="font-size:19px" ng-show="personalinfo.NumberExternal != null"># {{personalinfo.NumberExternal}}</label> {{ personalinfo.StreetAddress1}} <label style="font-size:19px" ng-show="personalinfo.NumberInternal != null"> S# {{ personalinfo.NumberInternal}}</label> </label><br>
+			<label style="font-size:19px">{{ personalinfo.City }} <label ng-show="personalinfo.City != null && personalinfo.ZipCode != null">,</label> {{ personalinfo.ZipCode }}</label><br>
+			<label style="font-size:19px">{{ personalinfo.Country }}</label><br><br>
+
+			<label  style="color:#0080c6; font-family:TextaW00-Black; font-size:19px" id="phone">PHONE</label><br>
+			<label style="font-size:19px">{{ personalinfo.Tel }}</label><br><br>
+
+			<label  style="color:#0080c6; font-family:TextaW00-Black; font-size:19px">EMAIL</label><br>		
+			<label style="font-size:19px">{{ personalinfo.Email }}</label><br>		
+		</div>
+		<br>
+		 <!-- <button class="button button-block button-energized padding-vertical" ng-click="launchPhotoLibrary()"> -->
+            <!-- upload picture -->
+         <!-- </button> -->
+		 <!-- <br> -->
+		   <!-- <img src="{{imagestring}}" />		  -->
+	</div>
+
+    <div class="loginMarginButton">
+		
+        <a href="" ng-click="EditInfo()" class="button button-block button-small blueController fontBold" style="font-size:21px; height:40px; line-height: 35px;">EDIT PERSONAL INFO</a>
+    </div> 
+
+<br>
+
+
+   
+</ion-content>
+</ion-view>

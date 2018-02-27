@@ -1,0 +1,68 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+<ion-content padding="false" class="scroll-content ionic-scroll" my-block="processing">
+
+    <div class="loginback">
+        <img src="img/loginblue.jpg" class="loginimg"/>
+    </div>
+
+    <div class="allelements">
+        <div id="headertop" style="margin-bottom:60px;">
+            <div>
+              <img src="img/DS_Mark_W.png"/>
+            </div>
+            <div>
+                <h3 class="fontBold">THE LEADER IN
+                    EMPLOYEE BENFITS</h3>
+            </div>
+        </div>
+
+
+        <div class="card" id="loginform">
+                <div class="item item-divider itemlogin blueController">
+                  
+                </div>
+
+            <form ng-valid-submit="doLogin()">
+                <label class="item item-input emailinput inputedit">
+                    <input type="email" ng-model="Login.User" required ng-disabled="processing" placeholder="EMAIL" class="colorplaceholder" >
+                </label>
+
+                <label class="item item-input emailinput inputedit" >
+                    <input type="password" ng-model="Login.Pass" required  ng-disabled="processing" placeholder="PASSWORD" class="colorplaceholder">
+                </label>
+
+				<ul class="fonterror">
+					<li ng-repeat="x in errors.view">{{x}}</li>
+				</ul>
+
+                <div class="loginMarginButton" style="margin-bottom: 20px;">
+                    <button class="button button-small button-block blueController fontBold" type="submit" id="centerButton">LOG IN</button>
+                </div>
+
+                <div id="footerlogin" style="margin-top:-8px; margin-bottom:10px;" class="fontBold" ng-disabled="processing">
+                    <a href="" ng-disabled="processing" class="textunderline">FORGOT USER NAME OR PASSWORD?</a>
+                </div>
+            </form>
+
+
+
+            <ul class="list">
+                <li class="item label-size no-background" style="color: red;" ng-repeat="e in errorsview">{{e}}</li>
+            </ul>
+        </div>
+
+        <div class="row" style="margin: 0px;">
+            <div class="col" style="float:left; margin:0px;">
+                <a href="#/app/registration" ng-disabled="processing" class="button button-positive button-block button-outline button-small fontBold" style="font-size:13px; margin-left:13px; margin-right:8px;">
+                    CREATE AN ACCOUNT
+                </a>
+            </div>
+            <div class="col" style="float:right; margin:0px;">
+                <a href="#/app/groupEnrollment" ng-disabled="processing" class="button button-positive button-block button-outline button-small fontBold" style="font-size:13px; margin-right:13px;">
+                    GROUP ENROLLMENT
+                </a>
+            </div>
+        </div>
+    </div>
+
+</ion-view>

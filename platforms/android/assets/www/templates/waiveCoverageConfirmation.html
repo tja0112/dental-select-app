@@ -1,0 +1,33 @@
+<ion-view>
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">WAIVE COVERAGE</h4>
+    </div>
+
+    <ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+	<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+	<p id="helpInfo" class="fontMedium">
+        Are you sure you want to waive your 
+        plan coverage? If so, please type your 
+        LAST NAME into the box below.
+	</p>
+
+    <form novalid ng-valid-submit="DoSubmit()">
+	<div class="row" style="margin-bottom:5px;">
+	    <div class="col col-90" style="margin:auto; display:block">
+	        <label class="item item-input inputedit">
+	            <input id="lastName" type="text" placeholder="TYPE YOUR LAST NAME HERE" class="colorplaceholder" required ng-disabled="processing" ng-model="User.lastName">
+	        </label>
+	    </div>
+	</div>
+
+	  <div class="row" style="margin-bottom:12px;">
+            <div class="col col-90" style="margin:auto; display:block">
+                <input type="submit" class="button blueController button-block button-small fontBold" value="WAIVE COVERAGE" ng-disabled="processing"/>
+             </div>
+        </div>
+    </form>
+
+</ion-content>
+</ion-view>

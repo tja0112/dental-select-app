@@ -1,0 +1,255 @@
+.waive{
+	
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:7px;
+	font-size: 20px;
+}
+
+.wcov{
+	
+	color:#0080c6;
+}
+
+.rw{
+	padding-left:10px !important;
+	padding-right:10px !important;
+	height:60px;
+	display:table;
+	overflow: hidden;
+	background-color:#888888;
+}
+
+.btnpstve{
+	
+	border:solid !important;
+	border-width:1px !important;
+	border-color:white !important;
+	border-radius: 2px;
+	/*margin-left: 15px !important; */
+	/*padding-left:15px !important;
+	padding-right:15px !important;
+		padding-top:5px !important;
+	padding-bottom:5px !important;*/
+}
+
+.alineleft{
+	color:white;
+	letter-spacing:1.5px;
+
+	display: table-cell;
+	vertical-align: middle;
+	/*padding-top:23px;
+	padding-left:20px;*/
+}
+
+.alineright{
+	
+	padding-top:15px;
+	padding-bottom:8px;
+	float:right;
+	margin-right:17px;
+}
+
+.voluntarygold{
+	
+	margin:auto;
+	text-align:center;
+    font-size:19px;
+}
+
+.goldnetwork{
+	
+	color:#0080c6;
+	
+}
+
+.noneed{
+	line-height: 13px;
+	margin: 0 auto;
+	font-size:16px;
+	margin-bottom:15px;
+}
+
+#moreinfo{
+    margin:auto;
+    display: block;
+	/* padding-top:2px !important;
+	padding-bottom:2px !important; */
+	
+	
+}
+
+
+.icon-left{
+
+	
+}
+
+.planrates{
+	
+	margin:20px auto;
+	text-align:center;
+	margin-bottom:10px;
+	font-size: 20px;
+}
+
+.col{
+    vertical-align: middle;
+}
+
+#tableStriped{
+    background: #ddd;
+    font-size: 13px;
+
+	
+}
+
+#tableStriped2{
+    background: white;
+    font-size: 13px;
+	
+}
+
+#paddingName{
+    padding-left: 25px;
+}
+
+.tb{
+	
+	margin:auto;
+	
+}
+
+
+
+
+ .ddAvailablePlans{
+	 width:100%;
+	 height:100px !important;
+	
+	border-bottom-color: white;
+	border-bottom-style: solid;
+	border-bottom-width:2px;
+ }
+
+.textAvailablePlans{
+	padding-top:10px;
+	padding-left:15px;
+	width:85%;
+	height:45px;
+	float:left;
+    /* border-right-color: white;
+	border-right-style: solid;
+	border-right-width:2px; */
+	
+	border-bottom-color: white;
+	border-bottom-style: solid;
+	border-bottom-width:2px;
+	
+	font-size:11px;
+	color:white;
+	letter-spacing:.5px;
+	background-color:#888888;
+}
+
+.iconn{
+
+	width:15%;
+	height:45px;
+	
+	float:right;
+
+    border-bottom-color: white;
+	border-bottom-style: solid;
+	border-bottom-width:2px;
+	
+}
+
+/*i {
+	
+	font-size:18px !important;
+	color:white;
+}*/
+
+i.nombre {
+	
+	font-size:18px !important;
+	color:white;
+}
+
+
+#marg{
+	
+	background-color:#888888;
+	padding-top:9px;
+}
+
+/*p{
+	
+	text-align:center;
+}*/
+
+#more{
+	
+	font-size:9px;
+	color:white;
+	margin-top:-7px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 3px;
+    padding-left: 25px; 
+    font-size: 13px;
+}
+
+.plansummary{
+	
+	margin:40px auto;
+	text-align:center;
+	margin-bottom:10px;
+	font-weight:500;
+	padding-top:45px;
+    font-size: 20px;
+}
+
+.ace{
+	
+	margin:auto;
+	text-align:center;
+	margin-bottom:10px;
+	font-size:15px;
+	line-height: 15px;
+}
+.circle-minus{
+	background-image: url("../imgNew/minuscircled_icon.png");
+   
+    background-size: 100%;
+    
+    background-repeat: no-repeat;
+	
+}
+.circle-plus{
+	background-image: url("../imgNew/pluscircled_icon.png");
+    background-size: 100%;
+    
+    background-repeat: no-repeat;
+	
+}
+
+
+/*#parentDiv {position: relative;}
+
+#childText {
+    position: absolute;
+    top: 50% !important;
+    height: 30% !important;
+    margin: -7% 0 0 0% !important;
+}*/
+
+/*tr:nth-child(odd){background-color: #f2f2f2}*/

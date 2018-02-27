@@ -1,0 +1,57 @@
+.img-icon{
+	
+	width:12%;
+	margin-right:20px;
+}
+
+.menu-label{
+	
+	padding-bottom:0px;
+	vertical-align:top;
+    letter-spacing: 1pt;
+    font-size: 17px;
+
+}
+
+.blueControllerMenu{
+    background-color: #136e9f;
+    color: white;
+    padding: 0px;
+
+
+}
+
+.blueControllerMenu:hover{
+    background-color: #136e9f;
+    color: white;
+}
+
+.blueControllerMenu:active{
+    background-color: #136e9f;
+    color: white
+}
+
+.blueControllerMenu:focus{
+    background-color: #136e9f;
+    color: white
+}
+
+.bar .title + .buttons {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 5px;
+}
+
+.menu .item-complex .item-content{
+    background: transparent;
+}
+
+.menu .item{
+    background: transparent;
+}
+
+.button:after{
+    right:0px;
+}
+

@@ -1,0 +1,33 @@
+﻿#tableStriped {
+    background: #ddd;
+    font-size: 13px;
+}
+
+#tableStriped2 {
+    background: white;
+    font-size: 13px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 0 !important;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #999999;
+    /*letter-spacing: 1.5pt;*/
+    padding-bottom: 5px !important;
+}
+
+
+/*.table{
+	margin:auto;
+    border: 0 !important;
+    text-align: center;
+    margin-bottom:10px;
+	color:darkgray;
+}*/

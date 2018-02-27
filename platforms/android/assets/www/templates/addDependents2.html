@@ -1,0 +1,99 @@
+﻿<!--<link rel="stylesheet" type="text/css" href="css/addDependents2.css">-->
+
+<ion-view>
+
+<!-- <ion-nav-bar class="blueController" style="border-bottom-color:red ;" >
+      <ion-nav-title  >
+        <img class="title" src="img/dentalSelectLogo.png" style=" margin:auto; display:block"></img>
+      </ion-nav-title>   
+      <ion-nav-back-button class="blueController">
+        <i class="icon ion-chevron-left">
+      </ion-nav-back-button>
+</ion-nav-bar> -->
+
+
+<div class="bar bar-subheader" id="subheadertitle">
+  <h4 class="title" id="subheaderFont">ADD DEPENDENTS</h4>
+</div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll"  my-block="processing">
+<div class="shadowlinediv" style="margin-top:-8px;" >
+  <img class="shadowlineimg" src="img/shadowline.png" />
+</div>
+
+
+<table class="stripes" >
+ <tr ng-repeat="item in dependents | orderBy:['FirstName', 'LastName']">
+   <td>{{ item.FirstName + " " + item.LastName }}</td>
+   <td>{{ item.Relation.Text }}</td>
+   <td><a href="" ng-click="removeDep(item)">x</a></td>
+ </tr>
+</table>
+
+    
+
+    <div style="display:none" id="displayForm">
+        <form id="formAddDepedent" novalidate="novalidate" ng-valid-submit="addDependent()">
+            <div class="list list-inset" style="margin-top:20px; margin-bottom:8px;">
+                <input ng-model="newDep.DependentId" type="hidden">
+                <label class="item item-input inputedit marginInputTextDependents">
+                    <input required ng-model="newDep.FirstName" type="text" placeholder="FIRST NAME" class="colorplaceholder">
+                </label>
+                <label class="item item-input inputedit marginInputTextDependents">
+                    <input required ng-model="newDep.LastName" type="text" placeholder="LAST NAME" class="colorplaceholder">
+                </label>
+                <label class="item item-input inputedit marginInputTextDependents">
+                    <input required ng-model="newDep.DateOfBirth" type="date" placeholder="DATE OF BIRTH" class="colorplaceholder">
+                </label>
+                <label class="item item-input inputedit marginInputTextDependents">
+                    <input required ng-model="newDep.SSN" type="text" my-mask="'ssn'" placeholder="SOCIAL SECURITY NUMBER" class="colorplaceholder">
+                </label>
+
+                <div class="item item-input item-select colorplaceholder inputedit 
+                            buttonTransparentBottom selectStandard"
+                     style="background-color: transparent; border-radius: 2px !important; 
+                            border: solid; border-color: #ddd; margin-top: 5px;
+                            border-width: 1px !important;  font-size: 8px; padding-top:100px;">
+                    <select data-tap-disabled="true" required ng-disabled="Processing" ng-options="item as item.Text for item in model.Relations track by item.Value" ng-model="newDep.Relation" id="placeholderSelect">
+                        <option value="">RELATIONSHIP</option>  
+                    </select>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="row" style="margin-bottom:5px; padding:0px; position:relative;">
+        <div class="col col-80" id="viewDependentsFinalReview" style="padding:0px 1px 0px 0px;">
+            <label class="item addDependentsToPlan fontMedium">
+                ADD ANOTHER DEPDENDENT
+            </label>
+        </div>
+
+        <div class="col col-20 " id="viewDependentsFinalReview" style="padding: 0px;">
+            <button class="buttonSquare button-clear button-block" style="background:#888888; color:white; font-size: 14px; margin-top: -1px; margin-bottom: 0px; line-height:0px; cursor:context-menu;" disabled>
+                <div class="circle-plus" ng-click="addDependent('#displayForm')" style="position:relative; width:17px; color:white; cursor:pointer; height:17px; margin:0 15px;"></div>
+            </button>
+        </div>
+    </div>
+
+    <ul class="fonterror">
+        <li ng-repeat="x in errors.view">{{x}}</li>
+    </ul>
+    <ul class="list">
+        <li class="item label-size no-background" style="color: red;" ng-repeat="e in errorsview">{{e}}</li>
+    </ul>
+
+  <div class="row">
+    <div class="col text-center" style="margin:auto; display:inline;">
+      <a ng-disabled="dependents.length == 0" class="button blueController button-small AddDependentsButtons fontBold" ng-click="doSubmit()" style="margin-right:10px;">SUBMIT</a>
+      <a ng-click="skipDependants()" class="button button-positive button-small button-outline AddDependentsButtons fontBold" style="height:40px;">SKIP</a>
+    </div>
+  </div>              
+
+  <br>
+  <br>
+
+</ion-content>
+</ion-view>

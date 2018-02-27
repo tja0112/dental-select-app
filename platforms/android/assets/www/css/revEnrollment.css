@@ -1,0 +1,94 @@
+/*#style-four {
+    height: 8px;
+    border: 0;
+    box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    width: 250px;
+}*/
+
+.col{
+    vertical-align: middle;
+}
+
+.rww{
+    padding: 0px !important;
+}
+
+#tableStriped{
+    background: #ddd;
+    font-size: 13px;
+}
+
+#tableStriped2{
+    background: white;
+    font-size: 13px;
+}
+
+#paddingName{
+    padding-left: 25px;
+}
+
+#title{
+    font-weight: bold;
+    color: gray;
+}
+
+
+#viewDependents{
+    background:#808080; 
+    color:white; 
+    font-size:11px; 
+   /*  margin-right:1px; */
+}
+
+/*#headertop img{
+    text-align: center;
+    height: 40px;
+}
+
+#headertop h2{
+    letter-spacing: 1pt;
+    font-weight: bold;
+}*/
+
+#personalInfo p{
+    letter-spacing: 1pt;
+    font-size: 13px;
+    text-align: center;
+}
+
+.bttn{
+    font-size: 12px !important;
+    padding-left: 19px !important;
+    padding-right: 19px!important;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+th, td {
+    text-align: left;
+    padding: 3px;
+    padding-left: 25px; 
+    font-size: 18px;
+}
+.circle-minus{
+	background-image: url("../imgNew/minuscircled_icon.png");
+   
+    background-size: 100%;
+    
+    background-repeat: no-repeat;
+	
+}
+.circle-plus{
+	background-image: url("../imgNew/pluscircled_icon.png");
+    background-size: 100%;
+    
+    background-repeat: no-repeat;
+	
+}
+
+/*tr:nth-child(odd){background-color: #f2f2f2}*/

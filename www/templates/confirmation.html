@@ -1,0 +1,184 @@
+<!--<link href="css/setup.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/confirmation.css">-->
+<ion-view hide-back-button="true">
+
+<!-- <ion-nav-bar class="blueController" style="border-bottom-color:red ;" >
+	    <ion-nav-title  >
+	  		<img class="title" src="img/dentalSelectLogo.png" style=" margin:auto; display:block"></img>
+	    </ion-nav-title>   
+	    <ion-nav-back-button class="blueController">
+	      <i class="icon ion-chevron-left">
+	    </ion-nav-back-button>
+</ion-nav-bar>
+ -->
+
+
+	<div class="bar bar-subheader" id="subheadertitle">
+		<h4 class="title" id="subheaderFont">CONFIRMATION</h4>
+	</div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-5px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+	<div class="row">	
+		<div class="col fontBold" style="text-align:center;" >
+			<br>
+			<label style="font-family: inherit; font-size: 14px; text-align: center; letter-spacing: .7pt; font-weight: normal;">CONFIRMATION ID:</label>
+			<label style="font-family: inherit; font-size: 14px; text-align: center; letter-spacing: .7pt; font-weight: normal;">{{Confirmation.ID}}</label>
+
+			
+				<div class="col text-center">	
+					<a class="button button-outline button-small button-block button-positive groupEnrollmentButton" ng-disabled="Processing" style="margin-top:20px;">EMAIL PLAN SUMMARY</a>
+				</div>
+			 	       
+		</div>        
+	</div>
+
+<br>
+<br>
+	<div class="card"  style="margin-top: -5px;" id="loginform">
+		<div class="item blueController item-divider">
+			<h4 class="fontBlack">PROCEED TO MEMBER SECTION</h4>
+		</div>
+
+		<form ng-valid-submit="DoLogin()" novalidate>
+
+		 <label class="item item-input emailinput inputedit">
+            <input type="email" ng-model="Confirmation.Email" required ng-disabled="Processing" placeholder="EMAIL" class="colorplaceholder">
+        </label>
+        <label class="item item-input emailinput inputedit">
+            <input type="password" ng-model="Confirmation.Pass" required ng-disabled="Processing" placeholder="PASSWORD" class="colorplaceholder">
+        </label>
+        <div class="loginMarginButton" style="margin-bottom: 8px;">
+            <input type="submit" ng-disabled="Processing" class="button button-block blueController button-small fontBold" id="centerButton" value="SUBMIT" />
+        </div>
+
+		<div id="footerlogin">
+	        <p class="fontBold">FORGOT YOUR USERNAME OR PASSWORD? 
+	            <a href="" style="text-decoration: underline;" ng-disabled="Processing">TAP HERE</a>
+	        </p>
+		</div>
+
+		<!--<ul class="fonterror">
+			<li ng-repeat="x in errors.view">{{x}}</li>
+		</ul>-->
+
+            <ul class="list">
+                <li class="item label-size no-background" style="color: red;" ng-repeat="e in errorsview">{{e}}</li>
+            </ul>
+
+		
+			
+		
+
+		</form>
+
+			
+			<div class="imgor">
+				<img src="img/orImage.png" id="mor"/>
+			</div>
+
+
+		<div class="row" >
+			<div class="textSign fontBold">
+				<p>SIGN IN WITH:</p>
+			</div>
+			
+
+			<div class="col signscont fontBold">
+				<div class="signslogobox">
+					<div class="signslogoimgfb">
+
+						<img class="fbimg" src="img/facebookIcon.png"/>
+
+					</div>
+					<div class="signslogocaptionfb " style="font-size:8px;">
+
+						<p>FACEBOOK</p>
+
+					</div>
+
+
+				</div>
+				<div class="signslogobox">
+					<div class="signslogoimgfb">
+
+						<img class="fbimg" src="img/yahooIcon.png"/>
+
+					</div>
+					<div class="signslogocaptionfb" style="font-size:8px;">
+
+						<p>YAHOO</p>
+
+					</div>
+
+
+				</div>
+				<div class="signslogobox">
+					<div class="signslogoimgfb">
+
+						<img class="fbimg" src="img/twitterIcon.png"/>
+
+					</div>
+					<div class="signslogocaptionfb" style="font-size:8px;">
+
+						<p>TWITTER</p>
+
+					</div>
+
+
+
+				</div>
+				<div class="signslogobox">
+					<div class="signslogoimgfb" >
+
+						<img class="fbimg" src="img/googleIcon.png"/>
+
+					</div>
+					<div class="signslogocaptionfb" style="font-size:8px;">
+
+						<p>GOOGLE</p>
+
+					</div>
+
+
+
+				</div>
+				<div class="signslogobox">
+					<div class="signslogoimgfb" >
+
+						<img class="fbimg" src="img/windowIcon.png"/>
+
+					</div>
+					<div class="signslogocaptionfb" style="font-size:8px;">
+
+						<p>MICROSOFT</p>
+
+					</div>
+
+
+				</div>
+
+
+
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view  hide-back-button="true" can-swipe-back="false">
+
+	<div class="bar bar-subheader" id="subheadertitle">
+  		<h4 class="title" id="subheaderFont" style="font-size: 21px !important;">CHOOSE ANOTHER PLAN TO CONTINUE</h4>
+	</div>
+
+    <div class="bar bar-footer" style="height:70px;" ng-show="hidden">
+        <div class="col text-center" style="margin:auto; display:block;">
+            <a href="#/app/finalReview" ng-click="DoEdit()" class="button button-small button-block blueController fontBold centerButton" style="font-size:14px; padding-left:30px; padding-right:30px;">
+                FINAL REVIEW
+            </a>
+        </div>
+    </div>	
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" ng-class="{'has-footer': hidden }" my-block="processing">
+
+	<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" load="{{reloadfinalreview()}}" /></div>
+
+	<br>	
+
+	<div class="col-100" id="ctetop" ng-repeat="plan in plans | orderBy:['-Enabled','-Waived','-Checked','Order']" style="background-image:url({{ plan.Url }});" load="{{reload(plan.Order)}}">
+		<a href="" name="dis_{{plan.Order}}" ng-click="checkedplan(plan.Order)">
+			<div class="col-100 ov" data-img="chcktop_{{plan.Order}}">
+				<h2 class="hedchoseaplanchecked">
+					<i class="ion-checkmark-round textwaivchoseaplanchecked" data-chc="chcktop_{{plan.Order}}"></i>
+				</h2>
+				<div class="textwaiv" data-wvd="chcktop_{{plan.Order}}">
+					<h2 class="textwaivp" data-wvd="chcktop_{{plan.Order}}">WAIVED</h2>
+				</div>
+				<div class="cttop"></div>
+				<div class="ctop" data-img="chcktop_{{plan.Order}}">
+					<label id="sp" data-img="chcktop_{{plan.Order}}">{{ plan.Caption }}</label>
+				</div>
+			</div>
+		 </a>	
+	 </div> 
+  </ion-content>
+</ion-view>

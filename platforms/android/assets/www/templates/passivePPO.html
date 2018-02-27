@@ -1,0 +1,56 @@
+<!--<link rel="stylesheet" type="text/css" href="css/passivePPO.css">-->
+
+<ion-view>
+
+<!-- <ion-nav-bar class="blueController" style="border-bottom-color:red ;" >
+        <ion-nav-title  >
+            <img class="title" src="img/dentalSelectLogo.png" style="margin:auto; display:block"/>
+        </ion-nav-title>   
+        <ion-nav-back-button class="blueController">
+          <i class="icon ion-chevron-left"></i> Back
+        </ion-nav-back-button>
+</ion-nav-bar> -->
+
+    <div class="bar bar-subheader" id="subheadertitle">
+        <h4 class="title" id="subheaderFont">PLAN OPTIONS</h4>
+    </div>
+
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll" my-block="processing">
+
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+    
+    <div style="margin-bottom:15px;" ></div>
+
+    <h2 class="text-center fontBlack" style="margin-bottom:30px;" id="titlePassivePPO">PASSIVE PPO</h2>
+    
+    
+
+    <p id="helpInfo" style="margin-bottom:25px;" class="fontMedium">Are you sure you want to waive your plan coverage?
+        If so, please type your <strong>LAST NAME</strong>  into the box below.
+    </p>
+        
+
+   <form novalidate ng-valid-submit="DoSubmit()">
+       <div class="row">
+            <div class="col">
+                <label class="item item-input inputedit">
+                  <input type="text" placeholder="TYPE YOUR LAST NAME HERE" ng-model="User.lastName" required ng-disabled="Processing" class="colorplaceholder">
+                </label>
+            </div>
+        </div>
+        <br>
+
+     
+      
+        <div class="row">
+            <div class="col text-center" style="display:block; margin:auto;">
+                <input type="submit" class="button blueController button-small fontBold" id="centerButton" value="WAIVE COVERAGE" ng-disabled="Processing">
+            </div>
+        </div>
+    </form>
+    
+
+</ion-content>
+</ion-view>

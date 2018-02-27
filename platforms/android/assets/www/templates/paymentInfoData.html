@@ -1,0 +1,66 @@
+<ion-view hide-back-button="true">
+
+<div class="bar bar-subheader"  id="subheadertitle">
+    <h4 class="title" id="subheaderFont">PAYMENT INFO</h4>
+</div>
+
+<div class="bar bar-footer" style="height:60px;">
+     <div class="col col-80 text-center" style="margin:auto; display:block;">
+       <a ng-click="addPaymentMethod()"class="button button-small blueController fontBold" style="font-size:17px; padding-left:10px; padding-right:10px; line-height:35px">ADD NEW PAYMENT METHOD</a>
+    </div>
+</div>  
+
+<ion-content padding="true" class="has-subheader scroll-content ionic-scroll has-footer" my-block="processing">
+<div class="shadowlinediv" style="margin-top:-8px;"><img class="shadowlineimg" src="img/shadowline.png" /></div>
+
+<br><br>
+ 
+    <div class="col-offset-10" ng-show="paymentmethodlist.length > 0" data-ng-repeat="method in paymentmethodlist track by method.Id">
+        <div class="row">
+            <div class="col col-40 fontMedium">
+                <label class="fontHeavy" style="font-size:17px">{{ method.AccountType.Text }}</label>
+                <div style="margin-top:10px;">
+                    <div ng-show="method.showf1 == 0" style="font-size:10px;">
+                        <label style="font-size:17px">{{ method.AccountName }}</label><br>
+                        <label style="font-size:17px">{{ method.HideAccountNumber }}</label><br>
+                        <label style="font-size:17px">Exp: {{ method.ExpirationMonth }}/{{ method.ExpirationYear }}</label>
+                    </div>
+
+                    <div ng-show="method.showf1 == 1" style="font-size:10px;">
+                        <label style="font-size:17px">{{ method.FinancialInstituteName }}</label><br>
+                        <label style="font-size:17px">{{ method.AccountName }}</label><br>
+                        <label style="font-size:17px">{{ method.HideAccountNumber }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="col text-center" ng-show="method.IsPrimary">
+                    <label style="color:#0080c6; font-size:16px;" class="text-center">PRIMARY</label><br>
+                </div>
+                <div class="text-center" style="margin:auto; display:block;" ng-show="!method.IsPrimary">
+                    <a href="" ng-click="setprimary(method.Id)" class="button button-small button-positive button-outline fontBold paymentInfoMakePrimary" style="font-size:15px !important;">
+                        MAKE PRIMARY
+                    </a>
+                </div>
+                <div class="text-center" style="margin:auto; display:block;">
+                    <a ng-click="editaccount(method.Id)" class="button button-small blueController fontBold paymentInfoButtons" style="border-color: white !important; letter-spacing: 1pt !important; font-size:12px !important;  height:30px; line-height:25px !important">
+                        EDIT
+                    </a>
+                </div>
+                <div class="text-center" style="margin:auto; display:block;">
+                    <a ng-click="deleteaccount(method.Id)" class="button button-small fontBold paymentInfoButtons" style="border-color: white !important; letter-spacing: 1pt !important; font-size:12px !important; background:#999999; color:white; height:30px; line-height:25px !important">
+                        DELETE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="white-space: pre-line;"  ng-show="paymentmethodlist.length == 0" class="text-center fontheavy">
+        you don't need have any payment
+        methods set up yet.
+    </p>
+    
+
+</ion-content>
+</ion-view>

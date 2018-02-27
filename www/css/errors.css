@@ -1,0 +1,85 @@
+﻿body {
+}
+
+/*#region Angular Validations */
+
+form input[type=email].ng-invalid.ng-touched.ng-dirty,
+form input[type=date].ng-invalid.ng-touched.ng-dirty,
+form input[type=email].ng-invalid-email.ng-touched.ng-dirty,
+form input[type=text].ng-invalid.ng-touched.ng-dirty,
+form input[type=password].ng-invalid.ng-touched.ng-dirty,
+form input[type=number].ng-invalid.ng-touched.ng-dirty,
+form textarea.ng-invalid.ng-touched.ng-dirty,
+form select.ng-invalid.ng-touched.ng-dirty,
+form.ng-submitted input[type=email].ng-invalid,
+form.ng-submitted input[type=date].ng-invalid,
+form.ng-submitted input[type=email].ng-invalid-email,
+form.ng-submitted input[type=text].ng-invalid,
+form.ng-submitted input[type=password].ng-invalid,
+form.ng-submitted input[type=number].ng-invalid,
+form.ng-submitted textarea.ng-invalid,
+form.ng-submitted select.ng-invalid {
+    border-style: solid !important;
+    border-color: red !important;
+    margin-left: 0px;
+    height: 38px;
+    border-bottom-color: red !important;
+    border-width: 1px !important;
+    /*border-radius: 3px !important;*/
+    position: absolute !important;
+}
+
+
+form input[type=checkbox].ng-invalid.ng-touched.ng-dirty,
+form input[type=radio].ng-invalid.ng-touched.ng-dirty,
+form.ng-submitted input[type=checkbox].ng-invalid,
+form.ng-submitted input[type=radio].ng-invalid {
+    outline-color: red;
+    outline-style: solid;
+    outline-width: thin;
+    position: absolute !important;
+}
+
+/*#endregion */
+
+/*
+form input[type=email].ng-invalid.ng-touched,
+form input[type=date].ng-invalid.ng-touched,
+form input[type=email].ng-invalid-email.ng-touched,
+form input[type=text].ng-invalid.ng-touched,
+form input[type=password].ng-invalid.ng-touched,
+form input[type=number].ng-invalid.ng-touched,
+form textarea.ng-invalid.ng-touched,
+form select.ng-invalid.ng-touched,
+form.ng-submitted input[type=email].ng-invalid,
+form.ng-submitted input[type=date].ng-invalid,
+form.ng-submitted input[type=email].ng-invalid-email,
+form.ng-submitted input[type=text].ng-invalid,
+form.ng-submitted input[type=password].ng-invalid,
+form.ng-submitted input[type=number].ng-invalid,
+form.ng-submitted textarea.ng-invalid,
+form.ng-submitted select.ng-invalid
+{
+ 
+	border-style: solid !important;
+	border-color:red !important;
+	margin-left: 0px;
+	height: 38px;
+	border-bottom-color:red !important;
+	border-width:1px !important;
+	border-radius: 3px !important;
+    position: absolute !important;
+}
+
+
+form input[type=checkbox].ng-invalid.ng-touched,
+form input[type=radio].ng-invalid.ng-touched,
+form.ng-submitted input[type=checkbox].ng-invalid,
+form.ng-submitted input[type=radio].ng-invalid
+{
+    outline-color: red;
+    outline-style: solid;
+    outline-width: thin;
+    position: absolute !important;
+}
+*/
